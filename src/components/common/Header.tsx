@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { TabType } from '../../types';
+import { speechService, SpeechState } from '../../services/speechService';
 import { 
   Menu, 
   Search, 
   Bookmark, 
   BookMarked, 
   Sparkles,
-  ChevronRight
+  ChevronRight,
+  Volume2,
+  Pause,
+  Square
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -47,6 +51,8 @@ export const Header: React.FC<HeaderProps> = ({
         return { group: '教會歷史', current: '教父殉道' };
       case 'sacred-art':
         return { group: '教會歷史', current: '聖像藝術' };
+      case 'church-architecture':
+        return { group: '教會歷史', current: '教會建築' };
       case 'hymns':
         return { group: '信徒活動', current: '培靈詩歌' };
       case 'journal':
@@ -57,6 +63,34 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   const breadcrumb = getBreadcrumb();
+
+  // Read-aloud (text-to-speech) of the current page or selected text
+  const [speechState, setSpeechState] = useState<SpeechState>(speechService.getState());
+
+  useEffect(() => speechService.subscribe(setSpeechState), []);
+
+  // Stop reading when switching to another page
+  useEffect(() => {
+    speechService.stop();
+  }, [activeTab]);
+
+  const handleSpeakToggle = () => {
+    if (speechState === 'playing') {
+      speechService.pause();
+      return;
+    }
+    if (speechState === 'paused') {
+      speechService.resume();
+      return;
+    }
+    const selection = window.getSelection()?.toString().trim();
+    const main = document.getElementById('main-content');
+    const text = selection || (main ? speechService.extractText(main) : '');
+    speechService.speak(text);
+  };
+
+  const speakLabel =
+    speechState === 'playing' ? '暫停朗讀' : speechState === 'paused' ? '繼續朗讀' : '朗讀本頁';
 
   return (
     <header className="sticky top-0 z-20 bg-slate-900/95 backdrop-blur-md border-b border-amber-900/30 text-slate-100 shadow-md">
@@ -109,6 +143,40 @@ export const Header: React.FC<HeaderProps> = ({
               />
             </div>
           </div>
+
+          {/* Read Aloud Button */}
+          {speechService.isSupported() && (
+            <div className="flex items-center gap-1">
+              <button
+                onMouseDown={(e) => e.preventDefault()} // keep any text selection intact
+                onClick={handleSpeakToggle}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-medium transition cursor-pointer ${
+                  speechState === 'idle'
+                    ? 'bg-slate-800 hover:bg-slate-750 border-slate-700 text-slate-200'
+                    : 'bg-amber-900/40 hover:bg-amber-900/60 border-amber-600/50 text-amber-200'
+                }`}
+                title={`${speakLabel}（可先選取文字，只朗讀選取部分）`}
+                aria-label={speakLabel}
+              >
+                {speechState === 'playing' ? (
+                  <Pause className="w-3.5 h-3.5 text-amber-400" />
+                ) : (
+                  <Volume2 className={`w-3.5 h-3.5 ${speechState === 'idle' ? 'text-slate-400' : 'text-amber-400'}`} />
+                )}
+                <span className="hidden sm:inline">{speakLabel}</span>
+              </button>
+              {speechState !== 'idle' && (
+                <button
+                  onClick={() => speechService.stop()}
+                  className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-750 border border-slate-700 text-slate-300 transition cursor-pointer"
+                  title="停止朗讀"
+                  aria-label="停止朗讀"
+                >
+                  <Square className="w-3.5 h-3.5 text-rose-400 fill-rose-400" />
+                </button>
+              )}
+            </div>
+          )}
 
           {/* Scripture Quick Reader Button */}
           <button

@@ -5,6 +5,7 @@ export type TabType =
   | 'history' 
   | 'fathers-martyrs' 
   | 'sacred-art' 
+  | 'church-architecture' 
   | 'hymns' 
   | 'journal';
 
@@ -169,6 +170,40 @@ export interface SacredArtConcept {
   }[];
   imageUrl?: string;
   caption?: string;
+}
+
+export interface ChurchArchitectureStyle {
+  id: string;
+  nameZh: string;
+  nameEn: string;
+  period: string;
+  description: string;
+  features: string[];
+  examples: string[];
+  imageUrl?: string;
+  imageCaption?: string;
+  imageCredit?: string;
+  imageSourceUrl?: string;
+}
+
+export interface ChurchBuildingPart {
+  nameZh: string;
+  nameEn: string;
+  description: string;
+}
+
+export interface FeaturedChurch {
+  id: string;
+  nameZh: string;
+  nameEn: string;
+  cityZh: string;
+  period: string;
+  styleZh: string;
+  description: string;
+  highlights: string[];
+  imageUrl?: string;
+  imageCredit?: string;
+  imageSourceUrl?: string;
 }
 
 export interface Hymn {

@@ -7,7 +7,8 @@ import { historyEncyclopediaData } from '../../data/historyEncyclopediaData';
 import { fathersMartyrsData } from '../../data/fathersMartyrsData';
 import { sacredArtData } from '../../data/sacredArtData';
 import { hymnsData } from '../../data/hymnsData';
-import { Search, X, MapPin, Calendar, Compass, Scroll, Users, Palette, Music, ArrowRight } from 'lucide-react';
+import { architectureStyles, featuredChurches } from '../../data/churchArchitectureData';
+import { Search, X, MapPin, Calendar, Compass, Scroll, Users, Palette, Landmark, Music, ArrowRight } from 'lucide-react';
 
 interface SearchResult {
   id: string;
@@ -192,7 +193,46 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
       }
     });
 
-    // 7. Hymns
+    // 7. Church Architecture
+    architectureStyles.forEach((s) => {
+      if (
+        s.nameZh.toLowerCase().includes(trimmed) ||
+        s.nameEn.toLowerCase().includes(trimmed) ||
+        s.description.toLowerCase().includes(trimmed) ||
+        s.examples.some((e) => e.toLowerCase().includes(trimmed))
+      ) {
+        list.push({
+          id: s.id,
+          tab: 'church-architecture',
+          title: s.nameZh,
+          subtitle: `${s.period} · ${s.nameEn}`,
+          snippet: s.description,
+          categoryBadge: '教會建築',
+          icon: Landmark,
+        });
+      }
+    });
+
+    featuredChurches.forEach((c) => {
+      if (
+        c.nameZh.toLowerCase().includes(trimmed) ||
+        c.nameEn.toLowerCase().includes(trimmed) ||
+        c.cityZh.toLowerCase().includes(trimmed) ||
+        c.description.toLowerCase().includes(trimmed)
+      ) {
+        list.push({
+          id: c.id,
+          tab: 'church-architecture',
+          title: `${c.nameZh} (${c.nameEn})`,
+          subtitle: `${c.cityZh} · ${c.period}`,
+          snippet: c.description,
+          categoryBadge: '教會建築',
+          icon: Landmark,
+        });
+      }
+    });
+
+    // 8. Hymns
     hymnsData.forEach((hymn) => {
       if (
         hymn.titleZh.toLowerCase().includes(trimmed) ||

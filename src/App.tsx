@@ -15,6 +15,7 @@ import { PaulJourneyView } from './components/paul-journey/PaulJourneyView';
 import { HistoryView } from './components/history/HistoryView';
 import { FathersMartyrsView } from './components/fathers/FathersMartyrsView';
 import { SacredArtView } from './components/sacred-art/SacredArtView';
+import { ChurchArchitectureView } from './components/church-architecture/ChurchArchitectureView';
 import { HymnsView } from './components/hymns/HymnsView';
 import { JournalView } from './components/journal/JournalView';
 import { itineraryData } from './data/itineraryData';
@@ -128,7 +129,7 @@ export default function App() {
         />
 
         {/* Main View Router */}
-        <main className="flex-1 pb-16">
+        <main id="main-content" className="flex-1 pb-16">
           {activeTab === 'itinerary' && (
             <ItineraryView
               onNavigateToSight={(sightId) => {
@@ -162,6 +163,8 @@ export default function App() {
           {activeTab === 'fathers-martyrs' && <FathersMartyrsView />}
 
           {activeTab === 'sacred-art' && <SacredArtView />}
+
+          {activeTab === 'church-architecture' && <ChurchArchitectureView />}
 
           {activeTab === 'hymns' && <HymnsView />}
 

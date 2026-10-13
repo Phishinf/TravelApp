@@ -17,7 +17,8 @@ import {
   X,
   Church,
   Activity,
-  Milestone
+  Milestone,
+  Landmark
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -58,7 +59,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   // Dropdown groups configuration as requested:
   // 1. "聖景足跡": 聖經景點, 保羅行程
-  // 2. "教會歷史": 教父殉道, 聖像藝術
+  // 2. "教會歷史": 教父殉道, 聖像藝術, 教會建築
   // 3. "信徒活動": 培靈詩歌, 研經日誌
   const navGroups: NavGroup[] = [
     {
@@ -79,6 +80,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       items: [
         { id: 'fathers-martyrs', labelZh: '教父殉道', labelEn: 'Fathers & Martyrs', icon: Users },
         { id: 'sacred-art', labelZh: '聖像藝術', labelEn: 'Sacred Art & Icons', icon: Palette },
+        { id: 'church-architecture', labelZh: '教會建築', labelEn: 'Church Architecture', icon: Landmark },
       ],
     },
     {
@@ -264,7 +266,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </button>
           </div>
 
-          {/* 4. Group 2: 教會歷史 (Dropdown) -> 教父殉道, 聖像藝術 */}
+          {/* 4. Group 2: 教會歷史 (Dropdown) -> 教父殉道, 聖像藝術, 教會建築 */}
           {navGroups.slice(1, 2).map((group) => {
             const GroupIcon = group.groupIcon;
             const isOpen = openGroups[group.groupId];
