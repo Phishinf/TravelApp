@@ -257,6 +257,15 @@ export const SightsView: React.FC<SightsViewProps> = ({
               </div>
             </div>
 
+            {(activeSightModal.imageCaption || activeSightModal.imageCredit) && (
+              <div className="px-6 pt-2 text-[11px] text-slate-500 leading-snug">
+                {activeSightModal.imageCaption}
+                {activeSightModal.imageCredit && (
+                  <span className="block text-slate-600">📷 {activeSightModal.imageCredit}</span>
+                )}
+              </div>
+            )}
+
             {/* Modal Body */}
             <div className="p-6 space-y-6 flex-1 text-slate-200">
               {/* Scripture Highlight Box */}

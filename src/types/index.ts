@@ -102,6 +102,7 @@ export interface Sight {
   }[];
   imageUrl: string;
   imageCaption?: string;
+  imageCredit?: string;
   coordinates?: {
     lat: number;
     lng: number;
@@ -118,6 +119,8 @@ export interface PaulJourneyStage {
   companions: string[];
   keyPassages: string[];
   route: string[];
+  /** Map points for each route stop, index-aligned with `route` ([lat, lng]); empty when the stop isn't a single place. */
+  routeCoords?: [number, number][][];
   summaryZh: string;
   historicalImpact: string;
   associatedEpistles: string[];

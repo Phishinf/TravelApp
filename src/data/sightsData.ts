@@ -63,8 +63,9 @@ export const sightsData: Sight[] = [
         description: '俯瞰整個卡瓦拉海灣的拜占庭與威尼斯風格要塞，古色古香的鵝卵石街道與典型馬其頓風格建築。'
       }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80',
-    imageCaption: '卡瓦拉（古稱尼亞波利）優美的愛琴海灣頭與歷史衛城',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Kavala_-_view_of_the_old_town_on_Panagia_peninsula.jpg/1280px-Kavala_-_view_of_the_old_town_on_Panagia_peninsula.jpg',
+    imageCaption: '卡瓦拉（古稱尼亞波利）帕納吉亞半島老城，右後方為卡馬雷斯引水渡槽',
+    imageCredit: 'Patrik Kunec / Wikimedia Commons, CC BY-SA 4.0',
     tags: ['馬其頓呼聲', '保羅宣教第一站', '愛琴海海港', '聖尼古拉教堂']
   },
   {
@@ -133,8 +134,9 @@ export const sightsData: Sight[] = [
         description: '紀念保羅宣教的拜占庭早期恢弘八角形大教堂，至今可見細緻的大理石馬賽克地面幾何拼花。'
       }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&w=1200&q=80',
-    imageCaption: '腓立比古城羅馬廣場與古代大教堂石柱遺跡',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/The_imposing_early_Christian_Basilica_%28Basilica_B%29_next_to_the_Forum%2C_PhilippiPhilippi_%287272631506%29.jpg/1280px-The_imposing_early_Christian_Basilica_%28Basilica_B%29_next_to_the_Forum%2C_PhilippiPhilippi_%287272631506%29.jpg',
+    imageCaption: '腓立比古城羅馬廣場旁的早期基督教大殿（B大殿）遺跡',
+    imageCredit: 'Carole Raddato / Wikimedia Commons, CC BY-SA 2.0',
     tags: ['歐洲第一信徒呂底亞', '保羅地牢唱詩', '喜樂的腓立比書', '古羅馬劇場']
   },
   {
@@ -205,8 +207,9 @@ export const sightsData: Sight[] = [
         description: '銘記曾佔城中過半人口的塞法迪猶太社群，悼念二戰中逝去的四萬五千名同胞，深具歷史與和平反思意義。'
       }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd1?auto=format&fit=crop&w=1200&q=80',
-    imageCaption: '帖撒羅尼迦海濱夕陽下的標誌性白塔與塞爾邁灣',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/White_Tower_in_Thessaloniki.jpg/1280px-White_Tower_in_Thessaloniki.jpg',
+    imageCaption: '帖撒羅尼迦海濱的標誌性白塔',
+    imageCredit: 'Hermann Hammer / Wikimedia Commons, CC BY-SA 4.0',
     tags: ['帖撒羅尼迦前後書', '薩洛尼卡敕令', '羅馬自由皇城', '伽列裡烏斯拱門']
   },
   {
@@ -247,8 +250,9 @@ export const sightsData: Sight[] = [
         description: '依翠綠的特利波塔莫斯河而建的傳統街區，保留有19世紀初的古猶太會堂與傳統懸挑木窗老宅。'
       }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=1200&q=80',
-    imageCaption: '庇哩亞（韋里亞）綠意盎然的山城與歷史紀念台階',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Altar_de_Saint_Paul.jpg/1280px-Altar_de_Saint_Paul.jpg',
+    imageCaption: '庇哩亞（韋里亞）使徒保羅講道台紀念處（Bema of St. Paul），兩側馬賽克描繪馬其頓異象與保羅講道',
+    imageCredit: 'Iolchos07 / Wikimedia Commons, CC BY-SA 4.0',
     tags: ['天天考查聖經', '賢於帖撒羅尼迦', '保羅講台Bema', '小耶路撒冷']
   },
   {
@@ -287,8 +291,9 @@ export const sightsData: Sight[] = [
         description: '古雅典市民政治與商業生活的中心，蘇格拉底講學、保羅每日與遇見的人辯論之所，保留有阿塔羅斯柱廊與赫菲斯托斯神廟。'
       }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&w=1200&q=80',
-    imageCaption: '雅典衛城與戰神山亞略巴古遠眺',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Areopagus_hill_Saint_Paul_from_Acropolis_Athens.jpg/1280px-Areopagus_hill_Saint_Paul_from_Acropolis_Athens.jpg',
+    imageCaption: '從雅典衛城俯瞰亞略巴古（戰神山），保羅曾在此講論「未識之神」',
+    imageCredit: 'Jebulon / Wikimedia Commons, CC0',
     tags: ['未識之神', '亞略巴古講章', '哲學搖籃', '衛城帕德嫩']
   },
   {
@@ -337,8 +342,9 @@ export const sightsData: Sight[] = [
         description: '哥林多通向愛琴海的東港，女執事非比服事之處（羅 16:1），保羅在此許願剪髮後揚帆啟航返回安提阿。'
       }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80',
-    imageCaption: '哥林多古城阿波羅神廟柱廊與壯闊的衛城背景',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Temple_of_Apollo_and_the_Acrocorinth_on_6_April_2019.jpg/1280px-The_Temple_of_Apollo_and_the_Acrocorinth_on_6_April_2019.jpg',
+    imageCaption: '哥林多古城阿波羅神廟與背後的哥林多衛城（Acrocorinth）',
+    imageCredit: 'George E. Koronaios / Wikimedia Commons, CC BY-SA 4.0',
     tags: ['不要怕只管講', '愛的真諦', '迦流審判台Bema', '以拉都銘文']
   }
 ];

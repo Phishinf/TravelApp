@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PaulJourneyStage } from '../../types';
 import { paulJourneyData } from '../../data/paulJourneyData';
+import { JourneyMap } from './JourneyMap';
 import { 
   Compass, 
   MapPin, 
@@ -159,6 +160,14 @@ export const PaulJourneyView: React.FC<PaulJourneyViewProps> = ({ onOpenScriptur
               共 {currentJourney.route.length} 個主要經由站點
             </span>
           </div>
+
+          {currentJourney.routeCoords && (
+            <JourneyMap
+              journey={currentJourney}
+              selectedStopIndex={selectedStopIndex}
+              onSelectStop={setSelectedStopIndex}
+            />
+          )}
 
           <div className="flex gap-2 overflow-x-auto pb-3 pt-1 scrollbar-none">
             {currentJourney.route.map((station, idx) => {
