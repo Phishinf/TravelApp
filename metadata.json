@@ -1,0 +1,6 @@
+{
+  "name": "Paul's Footsteps - Greece Pilgrimage & Study Guide",
+  "description": "Comprehensive interactive travel guide and study handbook for Paul's missionary footsteps in Greece, featuring itineraries, historical encyclopedia, church fathers, sacred icons, and hymnal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
