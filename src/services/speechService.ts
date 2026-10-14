@@ -12,13 +12,24 @@ const MAX_CHUNK_LENGTH = 180;
 
 const VOICE_KEY = 'tts-voice-uri';
 const RATE_KEY = 'tts-rate';
-const LANG_PRIORITY = ['zh-TW', 'zh-HK', 'zh-CN', 'zh'];
+const DIALECT_KEY = 'tts-dialect';
+
+export type Dialect = 'cantonese' | 'mandarin';
+
+// Cantonese voices are tagged zh-HK / yue; Mandarin ones zh-TW / zh-CN
+const CANTONESE_LANGS = ['yue', 'zh-HK', 'zh-MO'];
+const LANG_PRIORITY: Record<Dialect, string[]> = {
+  cantonese: [...CANTONESE_LANGS, 'zh-TW', 'zh-CN', 'zh'],
+  mandarin: ['zh-TW', 'zh-CN', 'zh-SG', 'zh-HK', 'zh'],
+};
+const FALLBACK_LANG: Record<Dialect, string> = { cantonese: 'zh-HK', mandarin: 'zh-TW' };
 
 export interface VoiceOption {
   uri: string;
   label: string;
   lang: string;
   quality: 'premium' | 'enhanced' | 'standard';
+  isCantonese: boolean;
 }
 
 const readPref = (key: string): string | null => {
@@ -40,6 +51,9 @@ const writePref = (key: string, value: string | null) => {
 
 const normLang = (v: SpeechSynthesisVoice) => v.lang.replace('_', '-');
 
+const isCantoneseVoice = (v: SpeechSynthesisVoice) =>
+  CANTONESE_LANGS.some((l) => normLang(v).startsWith(l)) || /cantonese|粵|粤/i.test(v.name);
+
 // Websites can't use Siri voices, so the best available are Apple's downloadable
 // Premium / Enhanced system voices (e.g. com.apple.voice.premium.zh-TW.Meijia).
 const qualityOf = (v: SpeechSynthesisVoice): VoiceOption['quality'] => {
@@ -49,15 +63,16 @@ const qualityOf = (v: SpeechSynthesisVoice): VoiceOption['quality'] => {
   return 'standard';
 };
 
-const scoreVoice = (v: SpeechSynthesisVoice): number => {
-  const langRank = LANG_PRIORITY.findIndex((l) => normLang(v).startsWith(l));
+const scoreVoice = (v: SpeechSynthesisVoice, dialect: Dialect): number => {
+  const priority = LANG_PRIORITY[dialect];
+  const langRank = isCantoneseVoice(v) && dialect === 'cantonese' ? 0 : priority.findIndex((l) => normLang(v).startsWith(l));
   if (langRank < 0) return -1;
   const quality = { premium: 30, enhanced: 20, standard: 0 }[qualityOf(v)];
   const uri = v.voiceURI.toLowerCase();
   const vendor = uri.startsWith('com.apple.voice') ? 10 : /google|microsoft.*online|natural/i.test(v.name) ? 8 : 0;
   // Apple's novelty/legacy engines sound robotic
   const penalty = uri.includes('eloquence') || uri.includes('speech.synthesis.voice') ? 15 : 0;
-  return (LANG_PRIORITY.length - langRank) * 100 + quality + vendor + (v.localService ? 1 : 0) - penalty;
+  return (priority.length - langRank) * 100 + quality + vendor + (v.localService ? 1 : 0) - penalty;
 };
 
 class SpeechService {
@@ -70,6 +85,7 @@ class SpeechService {
   private voiceListeners = new Set<() => void>();
   private voiceURI: string | null = readPref(VOICE_KEY);
   private rate = Number(readPref(RATE_KEY)) || 1;
+  private dialect: Dialect = readPref(DIALECT_KEY) === 'mandarin' ? 'mandarin' : 'cantonese';
 
   constructor() {
     if (!this.isSupported()) return;
@@ -89,16 +105,43 @@ class SpeechService {
     };
   }
 
-  // Chinese voices, best first
-  public getVoiceOptions(): VoiceOption[] {
+  private rankedVoices(): SpeechSynthesisVoice[] {
     return this.voices
-      .filter((v) => scoreVoice(v) >= 0)
-      .sort((a, b) => scoreVoice(b) - scoreVoice(a))
-      .map((v) => {
-        const quality = qualityOf(v);
-        const tag = quality === 'premium' ? '・高品質' : quality === 'enhanced' ? '・增強' : '';
-        return { uri: v.voiceURI, label: `${v.name.replace(/\s*\((premium|enhanced)\)/i, '')} (${normLang(v)})${tag}`, lang: normLang(v), quality };
-      });
+      .filter((v) => scoreVoice(v, this.dialect) >= 0)
+      .sort((a, b) => scoreVoice(b, this.dialect) - scoreVoice(a, this.dialect));
+  }
+
+  // Chinese voices, best first for the current dialect
+  public getVoiceOptions(): VoiceOption[] {
+    return this.rankedVoices().map((v) => {
+      const quality = qualityOf(v);
+      const cantonese = isCantoneseVoice(v);
+      const tag = quality === 'premium' ? '・高品質' : quality === 'enhanced' ? '・增強' : '';
+      const dialectTag = cantonese ? '粵語' : '國語';
+      return {
+        uri: v.voiceURI,
+        label: `${dialectTag}｜${v.name.replace(/\s*\((premium|enhanced)\)/i, '')} (${normLang(v)})${tag}`,
+        lang: normLang(v),
+        quality,
+        isCantonese: cantonese,
+      };
+    });
+  }
+
+  public getDialect(): Dialect {
+    return this.dialect;
+  }
+
+  // Switching dialect resets an explicit voice, since the voice decides the language spoken
+  public setDialect(dialect: Dialect) {
+    this.dialect = dialect;
+    writePref(DIALECT_KEY, dialect);
+    this.setVoice(null);
+    this.voiceListeners.forEach((cb) => cb());
+  }
+
+  public hasCantoneseVoice(): boolean {
+    return this.voices.some(isCantoneseVoice);
   }
 
   // null = automatic (best available)
@@ -205,9 +248,7 @@ class SpeechService {
     if (!this.voices.length) this.voices = window.speechSynthesis.getVoices();
     const chosen = this.voiceURI && this.voices.find((v) => v.voiceURI === this.voiceURI);
     if (chosen) return chosen;
-    return this.voices
-      .filter((v) => scoreVoice(v) >= 0)
-      .sort((a, b) => scoreVoice(b) - scoreVoice(a))[0];
+    return this.rankedVoices()[0];
   }
 
   public speak(text: string) {
@@ -231,7 +272,7 @@ class SpeechService {
     const utterance = new SpeechSynthesisUtterance(this.queue[this.index]);
     const voice = this.pickVoice();
     if (voice) utterance.voice = voice;
-    utterance.lang = voice?.lang || 'zh-TW';
+    utterance.lang = voice?.lang || FALLBACK_LANG[this.dialect];
     utterance.rate = this.rate;
 
     utterance.onend = () => {

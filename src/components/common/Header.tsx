@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { TabType } from '../../types';
-import { speechService, SpeechState, VoiceOption } from '../../services/speechService';
+import { speechService, SpeechState, VoiceOption, Dialect } from '../../services/speechService';
 import { 
   Menu, 
   Search, 
@@ -95,6 +95,7 @@ export const Header: React.FC<HeaderProps> = ({
   const [voiceOptions, setVoiceOptions] = useState<VoiceOption[]>(() => speechService.getVoiceOptions());
   const [voiceURI, setVoiceURI] = useState<string | null>(speechService.getSelectedVoiceURI());
   const [rate, setRate] = useState(speechService.getRate());
+  const [dialect, setDialect] = useState<Dialect>(speechService.getDialect());
   const voiceMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => speechService.subscribeVoices(() => setVoiceOptions(speechService.getVoiceOptions())), []);
@@ -109,6 +110,7 @@ export const Header: React.FC<HeaderProps> = ({
   }, [voiceMenuOpen]);
 
   const hasHighQualityVoice = voiceOptions.some((v) => v.quality !== 'standard');
+  const hasCantoneseVoice = voiceOptions.some((v) => v.isCantonese);
   const isApple = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
   const speakLabel =
@@ -199,6 +201,40 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 {voiceMenuOpen && (
                   <div className="absolute right-0 top-full mt-2 w-72 max-w-[calc(100vw-2rem)] p-4 rounded-xl bg-slate-900 border border-slate-700 shadow-2xl space-y-3 text-xs z-30">
+                    <div className="space-y-1.5">
+                      <span className="font-semibold text-slate-300">朗讀語言</span>
+                      <div className="flex gap-1">
+                        {([
+                          ['cantonese', '粵語（廣東話）'],
+                          ['mandarin', '國語（普通話）'],
+                        ] as [Dialect, string][]).map(([d, label]) => (
+                          <button
+                            key={d}
+                            onClick={() => {
+                              setDialect(d);
+                              setVoiceURI(null);
+                              speechService.setDialect(d);
+                            }}
+                            className={`flex-1 py-1 rounded-md border transition cursor-pointer ${
+                              dialect === d
+                                ? 'bg-amber-500 border-amber-500 text-slate-950 font-bold'
+                                : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-750'
+                            }`}
+                          >
+                            {label}
+                          </button>
+                        ))}
+                      </div>
+                      {dialect === 'cantonese' && !hasCantoneseVoice && (
+                        <p className="text-[11px] leading-relaxed text-amber-300/90">
+                          此裝置未安裝粵語語音，暫時會以國語朗讀。
+                          {isApple
+                            ? '請到「設定 › 輔助使用 › 朗讀內容 › 聲音 › 中文（香港）」下載（如：善怡），下載後重新整理本頁。'
+                            : '請在系統的語音／文字轉語音設定中加入「中文（香港）」或「粵語」語音（Android 可於 Google 文字轉語音引擎下載），下載後重新整理本頁。'}
+                        </p>
+                      )}
+                    </div>
+
                     <label className="block space-y-1.5">
                       <span className="font-semibold text-slate-300">朗讀聲音</span>
                       <select
@@ -242,7 +278,11 @@ export const Header: React.FC<HeaderProps> = ({
                     </div>
 
                     <button
-                      onClick={() => speechService.speak('平安！歡迎使用保羅行蹤朗讀功能。願主的話語伴隨你的朝聖旅程。')}
+                      onClick={() => speechService.speak(
+                          dialect === 'cantonese'
+                            ? '平安！歡迎使用保羅行蹤朗讀功能。願主嘅話語伴隨你嘅體驗之旅。'
+                            : '平安！歡迎使用保羅行蹤朗讀功能。願主的話語伴隨你的體驗之旅。'
+                        )}
                       className="w-full py-1.5 rounded-lg bg-amber-900/40 hover:bg-amber-900/60 border border-amber-600/50 text-amber-200 font-medium transition cursor-pointer"
                     >
                       試聽
