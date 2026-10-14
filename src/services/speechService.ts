@@ -10,12 +10,115 @@ const INLINE_DISPLAYS = new Set(['inline', 'inline-block', 'inline-flex', 'inlin
 // Chrome silently stops long utterances, so keep each chunk short
 const MAX_CHUNK_LENGTH = 180;
 
+const VOICE_KEY = 'tts-voice-uri';
+const RATE_KEY = 'tts-rate';
+const LANG_PRIORITY = ['zh-TW', 'zh-HK', 'zh-CN', 'zh'];
+
+export interface VoiceOption {
+  uri: string;
+  label: string;
+  lang: string;
+  quality: 'premium' | 'enhanced' | 'standard';
+}
+
+const readPref = (key: string): string | null => {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+};
+
+const writePref = (key: string, value: string | null) => {
+  try {
+    if (value === null) localStorage.removeItem(key);
+    else localStorage.setItem(key, value);
+  } catch {
+    // storage unavailable (private mode etc.) — preference just won't persist
+  }
+};
+
+const normLang = (v: SpeechSynthesisVoice) => v.lang.replace('_', '-');
+
+// Websites can't use Siri voices, so the best available are Apple's downloadable
+// Premium / Enhanced system voices (e.g. com.apple.voice.premium.zh-TW.Meijia).
+const qualityOf = (v: SpeechSynthesisVoice): VoiceOption['quality'] => {
+  const id = `${v.voiceURI} ${v.name}`.toLowerCase();
+  if (id.includes('premium')) return 'premium';
+  if (id.includes('enhanced') || id.includes('增強')) return 'enhanced';
+  return 'standard';
+};
+
+const scoreVoice = (v: SpeechSynthesisVoice): number => {
+  const langRank = LANG_PRIORITY.findIndex((l) => normLang(v).startsWith(l));
+  if (langRank < 0) return -1;
+  const quality = { premium: 30, enhanced: 20, standard: 0 }[qualityOf(v)];
+  const uri = v.voiceURI.toLowerCase();
+  const vendor = uri.startsWith('com.apple.voice') ? 10 : /google|microsoft.*online|natural/i.test(v.name) ? 8 : 0;
+  // Apple's novelty/legacy engines sound robotic
+  const penalty = uri.includes('eloquence') || uri.includes('speech.synthesis.voice') ? 15 : 0;
+  return (LANG_PRIORITY.length - langRank) * 100 + quality + vendor + (v.localService ? 1 : 0) - penalty;
+};
+
 class SpeechService {
   private queue: string[] = [];
   private index = 0;
   private state: SpeechState = 'idle';
   private listeners = new Set<(state: SpeechState) => void>();
   private session = 0;
+  private voices: SpeechSynthesisVoice[] = [];
+  private voiceListeners = new Set<() => void>();
+  private voiceURI: string | null = readPref(VOICE_KEY);
+  private rate = Number(readPref(RATE_KEY)) || 1;
+
+  constructor() {
+    if (!this.isSupported()) return;
+    const load = () => {
+      this.voices = window.speechSynthesis.getVoices();
+      this.voiceListeners.forEach((cb) => cb());
+    };
+    load();
+    // Safari and Chrome populate voices asynchronously
+    window.speechSynthesis.addEventListener?.('voiceschanged', load);
+  }
+
+  public subscribeVoices(cb: () => void): () => void {
+    this.voiceListeners.add(cb);
+    return () => {
+      this.voiceListeners.delete(cb);
+    };
+  }
+
+  // Chinese voices, best first
+  public getVoiceOptions(): VoiceOption[] {
+    return this.voices
+      .filter((v) => scoreVoice(v) >= 0)
+      .sort((a, b) => scoreVoice(b) - scoreVoice(a))
+      .map((v) => {
+        const quality = qualityOf(v);
+        const tag = quality === 'premium' ? '・高品質' : quality === 'enhanced' ? '・增強' : '';
+        return { uri: v.voiceURI, label: `${v.name.replace(/\s*\((premium|enhanced)\)/i, '')} (${normLang(v)})${tag}`, lang: normLang(v), quality };
+      });
+  }
+
+  // null = automatic (best available)
+  public getSelectedVoiceURI(): string | null {
+    return this.voiceURI;
+  }
+
+  public setVoice(uri: string | null) {
+    this.voiceURI = uri;
+    writePref(VOICE_KEY, uri);
+  }
+
+  public getRate(): number {
+    return this.rate;
+  }
+
+  public setRate(rate: number) {
+    this.rate = rate;
+    writePref(RATE_KEY, String(rate));
+  }
 
   public isSupported(): boolean {
     return typeof window !== 'undefined' && 'speechSynthesis' in window;
@@ -99,13 +202,12 @@ class SpeechService {
   }
 
   private pickVoice(): SpeechSynthesisVoice | undefined {
-    const voices = window.speechSynthesis.getVoices();
-    const preferred = ['zh-TW', 'zh-HK', 'zh-CN', 'zh'];
-    for (const lang of preferred) {
-      const voice = voices.find((v) => v.lang.replace('_', '-').startsWith(lang));
-      if (voice) return voice;
-    }
-    return undefined;
+    if (!this.voices.length) this.voices = window.speechSynthesis.getVoices();
+    const chosen = this.voiceURI && this.voices.find((v) => v.voiceURI === this.voiceURI);
+    if (chosen) return chosen;
+    return this.voices
+      .filter((v) => scoreVoice(v) >= 0)
+      .sort((a, b) => scoreVoice(b) - scoreVoice(a))[0];
   }
 
   public speak(text: string) {
@@ -130,7 +232,7 @@ class SpeechService {
     const voice = this.pickVoice();
     if (voice) utterance.voice = voice;
     utterance.lang = voice?.lang || 'zh-TW';
-    utterance.rate = 1;
+    utterance.rate = this.rate;
 
     utterance.onend = () => {
       if (session !== this.session) return;
