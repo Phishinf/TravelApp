@@ -18,7 +18,8 @@ import {
   Church,
   Activity,
   Milestone,
-  Landmark
+  Landmark,
+  Languages
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -178,6 +179,28 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 activeTab === 'itinerary' ? 'bg-amber-700/80 text-amber-100' : 'bg-slate-800 text-slate-400'
               }`}>
                 10-Day
+              </span>
+            </button>
+          </div>
+
+          {/* 1b. "希臘語會話" (Single item in sidebar) */}
+          <div className="pt-1">
+            <button
+              onClick={() => handleSelectTab('greek-phrases')}
+              className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-medium transition cursor-pointer ${
+                activeTab === 'greek-phrases'
+                  ? 'bg-amber-600 text-white font-bold shadow-md shadow-amber-950 border border-amber-400/50'
+                  : 'text-slate-300 hover:text-amber-200 hover:bg-slate-800/80 border border-transparent'
+              }`}
+            >
+              <div className="flex items-center gap-2.5">
+                <Languages className={`w-4 h-4 ${activeTab === 'greek-phrases' ? 'text-amber-200' : 'text-amber-400'}`} />
+                <span className="text-sm">希臘語會話</span>
+              </div>
+              <span className={`text-[10px] px-1.5 py-0.5 rounded font-mono ${
+                activeTab === 'greek-phrases' ? 'bg-amber-700/80 text-amber-100' : 'bg-slate-800 text-slate-400'
+              }`}>
+                Ελληνικά
               </span>
             </button>
           </div>

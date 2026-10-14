@@ -7,7 +7,8 @@ export type TabType =
   | 'sacred-art' 
   | 'church-architecture' 
   | 'hymns' 
-  | 'journal';
+  | 'journal'
+  | 'greek-phrases';
 
 export interface ScheduleEvent {
   id: string;
@@ -280,4 +281,19 @@ export interface JournalEntry {
   verseRef?: string;
   tags: string[];
   createdAt: number;
+}
+
+export interface GreekPhrase {
+  id: string;
+  greek: string;
+  translit: string;
+  zh: string;
+  note?: string;
+}
+
+export interface GreekPhraseCategory {
+  id: string;
+  titleZh: string;
+  titleEn: string;
+  phrases: GreekPhrase[];
 }

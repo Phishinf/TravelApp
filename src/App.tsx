@@ -18,6 +18,7 @@ import { SacredArtView } from './components/sacred-art/SacredArtView';
 import { ChurchArchitectureView } from './components/church-architecture/ChurchArchitectureView';
 import { HymnsView } from './components/hymns/HymnsView';
 import { JournalView } from './components/journal/JournalView';
+import { GreekPhrasesView } from './components/greek/GreekPhrasesView';
 import { itineraryData } from './data/itineraryData';
 import { storageService } from './services/storageService';
 import { Sparkles, Heart } from 'lucide-react';
@@ -167,6 +168,8 @@ export default function App() {
           {activeTab === 'church-architecture' && <ChurchArchitectureView />}
 
           {activeTab === 'hymns' && <HymnsView />}
+
+          {activeTab === 'greek-phrases' && <GreekPhrasesView />}
 
           {activeTab === 'journal' && (
             <JournalView

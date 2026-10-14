@@ -58,6 +58,8 @@ export const Header: React.FC<HeaderProps> = ({
         return { group: '信徒活動', current: '培靈詩歌' };
       case 'journal':
         return { group: '信徒活動', current: '讀經日誌' };
+      case 'greek-phrases':
+        return { group: null, current: '希臘語會話 (Greek Phrases)' };
       default:
         return { group: null, current: '行程' };
     }
