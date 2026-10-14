@@ -144,7 +144,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 truncate">
-                Paul&apos;s Footsteps Guide
+                Paul&apos;s Footsteps Journey
               </p>
             </div>
           </div>

@@ -25,25 +25,25 @@ interface JournalViewProps {
 
 const INSPIRATIONAL_PROMPTS = [
   {
-    dayNumber: 2,
+    dayNumber: 8,
     location: '腓立比呂底亞洗禮溪畔',
     title: '呂底亞的敞開心門與我對福音的熱忱',
     prayer: '主啊，開導我的心，如同祢開導呂底亞，使我一生竭力接待聖徒、活出順服。',
   },
   {
-    dayNumber: 3,
+    dayNumber: 5,
     location: '庇哩亞聖經講台',
     title: '效法庇哩亞人天天考查聖經的心志',
     prayer: '主啊，賜我飢渴慕義的心，不隨波逐流，單單以聖經真理為我腳前的燈、路上的光。',
   },
   {
-    dayNumber: 6,
+    dayNumber: 2,
     location: '雅典亞略巴古 (Mars Hill)',
     title: '在世俗哲學與偶像滿布的世界勇敢見證獨一真神',
     prayer: '天父，賜我保羅跨文化的宣教智慧，向後現代世界闡明復活的耶穌基督。',
   },
   {
-    dayNumber: 7,
+    dayNumber: 1,
     location: '古哥林多審判台 (Bema)',
     title: '站在主的審判台前——奔跑不求人的掌聲',
     prayer: '願我一生事奉能經得起火的試驗，持守真道，向著標竿直跑。',

@@ -1,4 +1,4 @@
-# Paul's Footsteps — Greece Pilgrimage & Study Guide
+# Paul's Footsteps — Greece Biblical History Journey (保羅行蹤・希臘聖經歷史體驗之旅)
 
 An interactive travel guide and study handbook for a 10-day pilgrimage that follows the Apostle Paul's missionary journeys through Greece (Kavala/Neapolis, Philippi, Thessaloniki, Berea, Meteora, and more). The content is mainly in Traditional Chinese, with English labels.
 

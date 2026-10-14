@@ -14,6 +14,16 @@ export const fathersMartyrsData: FatherMartyr[] = [
       '主後96年致信哥林多教會，勸勉聖徒效法基督的謙卑柔和，順服合法的長老職分。',
       '強調使徒統緒（Apostolic Succession）與教會崇拜的秩序，避免嫉妒與紛爭。',
       '相傳於皇帝圖拉真時期被流放至克里米亞採石場，終被系上鐵錨沈入黑海英勇殉道。'
+    ],
+    memorialSites: [
+      {
+        name: '聖革利免聖殿 (Basilica di San Clemente)',
+        location: '義大利・羅馬',
+        connection: '奉獻給革利免的古老聖殿，相傳建於他住宅與早期家庭教會的原址上。9 世紀「斯拉夫使徒」西里爾與美多迪烏將革利免的遺骨從克里米亞迎回安放於此。今日的教堂共分三層：12 世紀的上層教堂（圖中金色「生命之樹」半圓頂鑲嵌畫）、4 世紀的地下古教堂，以及更深處 1 世紀的羅馬房屋——走一趟就像穿越整部初期教會史。',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Rome_San_Clemente_interior.jpg/960px-Rome_San_Clemente_interior.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Rome_San_Clemente_interior.jpg',
+        credit: 'Nicholas Hartmann / CC BY-SA 4.0'
+      }
     ]
   },
   {
@@ -29,6 +39,24 @@ export const fathersMartyrsData: FatherMartyr[] = [
       '「我是上帝的麥子，要藉野獸的牙齒被磨碎，好成為基督純潔的麵包。」',
       '懇求羅馬信徒不要攔阻他得榮耀的冠冕：「任憑火、十字架、與野獸搏鬥、骨骼折斷、肢體撕裂……只要我能得著基督！」',
       '奠定「一主教、長老與執事」的三重聖職體系，捍衛基督真正道成肉身、受難與復活的真理，堅決反對幻影論（Docetism）。'
+    ],
+    memorialSites: [
+      {
+        name: '羅馬競技場紀念十字架 (Colosseum)',
+        location: '義大利・羅馬',
+        connection: '以格那提被押解到羅馬「藉野獸的牙齒被磨碎」，傳統認為他殉道於弗拉維圓形劇場（羅馬競技場）。場內豎立的十字架紀念在此殉道的初期信徒，教宗每年受難節在此帶領苦路禮儀。讀他寫給羅馬人的書信時，不妨想像他正一步步走向這裡。',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Koloseum_Roma_fc04.jpg/960px-Koloseum_Roma_fc04.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Koloseum_Roma_fc04.jpg',
+        credit: 'Wikimedia Commons / CC BY-SA 3.0'
+      },
+      {
+        name: '聖革利免聖殿地下古教堂',
+        location: '義大利・羅馬',
+        connection: '相傳以格那提的遺骨後來由安提阿遷回羅馬，安放於聖革利免聖殿祭壇之下，與羅馬的革利免同葬一處。圖為 4 世紀的地下古教堂層，牆上仍保存中世紀壁畫。',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Roma%2C_Basilica_di_San_Clemente%2C_basilica_antica_%281%29.jpg/960px-Roma%2C_Basilica_di_San_Clemente%2C_basilica_antica_%281%29.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Roma,_Basilica_di_San_Clemente,_basilica_antica_(1).jpg',
+        credit: 'Palickap / CC BY-SA 4.0'
+      }
     ]
   },
   {
@@ -44,6 +72,16 @@ export const fathersMartyrsData: FatherMartyr[] = [
       '「我事奉祂已有八十六年，祂從未虧負過我，我怎能褻瀆救贖我的君王呢？」',
       '在火刑堆中如同烘烤的麵包與精金般發出芬芳，劊子手最終以短劍刺死他，遺骨被信徒珍藏。',
       '教導並培育了下一代偉大護教學者愛任紐。'
+    ],
+    memorialSites: [
+      {
+        name: '聖坡旅甲教堂 (St. Polycarp Church)',
+        location: '土耳其・伊茲密爾（古士每拿）',
+        connection: '伊茲密爾現存最古老的教堂，17 世紀蒙鄂圖曼蘇丹特許興建，奉獻給在士每拿殉道的坡旅甲。內部壁畫描繪坡旅甲殉道的情景。士每拿正是啟示錄七教會之一（啟 2:8-11），主對這教會說：「你務要至死忠心，我就賜給你那生命的冠冕」——坡旅甲以生命應驗了這句話。',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/St._Polycarp_Kilisesi_%2820221025%29.jpg/960px-St._Polycarp_Kilisesi_%2820221025%29.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:St._Polycarp_Kilisesi_(20221025).jpg',
+        credit: 'Kadı Kadı / CC BY-SA 2.0'
+      }
     ]
   },
   {
@@ -74,6 +112,24 @@ export const fathersMartyrsData: FatherMartyr[] = [
       '首創「重頭總結說」（Recapitulation / Anakephalaiosis）：基督作為第二亞當，走過第一亞當失敗的每一步，順服至死，在自己裡面重整萬有扭轉墮落。',
       '堅定確認四本福音書（馬太、馬可、路加、約翰）如四活物與四方之風，是神賜給普世教會不可加減的正典根基。',
       '高舉使徒統緒（Apostolic Succession）與信仰準則（Rule of Faith），證明正統大公教會世代傳承之真道的純全。'
+    ],
+    memorialSites: [
+      {
+        name: '聖愛任紐教堂 (Église Saint-Irénée)',
+        location: '法國・里昂',
+        connection: '里昂最古老的教堂之一，建於早期基督徒墓地之上。傳統認為愛任紐葬於此處，與主後 177 年里昂大逼迫中殉道的信徒同葬。教堂外的山坡設有苦路十四處與十字架。',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/%C3%89glise_Saint-Ir%C3%A9n%C3%A9e_%28Lyon_5e%29.jpg/960px-%C3%89glise_Saint-Ir%C3%A9n%C3%A9e_%28Lyon_5e%29.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:%C3%89glise_Saint-Ir%C3%A9n%C3%A9e_(Lyon_5e).jpg',
+        credit: 'SashiRolls / CC BY-SA 4.0'
+      },
+      {
+        name: '聖愛任紐教堂地下墓室 (Crypte)',
+        location: '法國・里昂',
+        connection: '這座歷史悠久的地下墓室歷經多次毀壞與重建（現貌多為 19 世紀修復）。這裡紀念愛任紐與里昂、維埃納的殉道者——他的前任主教坡提努正是在 177 年那場逼迫中殉道，愛任紐隨後接任主教。',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Lyon_-_%C3%89glise_Saint-Ir%C3%A9n%C3%A9e_-_Crypte-003.JPG/960px-Lyon_-_%C3%89glise_Saint-Ir%C3%A9n%C3%A9e_-_Crypte-003.JPG',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Lyon_-_%C3%89glise_Saint-Ir%C3%A9n%C3%A9e_-_Crypte-003.JPG',
+        credit: 'Xavier Caré / CC BY-SA 4.0'
+      }
     ]
   },
   {
@@ -89,6 +145,16 @@ export const fathersMartyrsData: FatherMartyr[] = [
       '首次在拉丁神學中確立「三位一體」（Trinitas）的經典術語：「一位實質，三個位格」（una substantia, tres personae）。',
       '名言：「殉道者的血是教會的種子」（Semen est sanguis christianorum）。',
       '哲學反思名言：「雅典與耶路撒冷何干？學院與教會有何相涉？」（What has Athens to do with Jerusalem?）'
+    ],
+    memorialSites: [
+      {
+        name: '迦太基圓形競技場 (Amphitheatre of Carthage)',
+        location: '突尼西亞・迦太基',
+        connection: '特土良的家鄉迦太基並沒有奉獻給他的教堂（他晚年傾向孟他努派，未被列為聖人），但這座競技場是主後 203 年貝蓓圖與菲莉絲蒂殉道之處，其殉道記相傳經特土良編修。場中今立有紀念十字架——「殉道者的血是教會的種子」在這裡有了具體的畫面。',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Roman_amphitheatre_of_Carthage_-_inner_view_south.jpg/1280px-Roman_amphitheatre_of_Carthage_-_inner_view_south.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Roman_amphitheatre_of_Carthage_-_inner_view_south.jpg',
+        credit: 'Elena Tatiana Chis / CC BY-SA 4.0'
+      }
     ]
   },
   {
@@ -104,6 +170,16 @@ export const fathersMartyrsData: FatherMartyr[] = [
       '首創聖經三重詮釋法（字面身體、道德靈魂、靈意屬靈），極大豐富了早期教會講道默想維度。',
       '在德修皇帝逼迫中遭受殘酷酷刑和鐵鐐折磨仍堅貞不屈，其後因傷重離世。',
       '一生著作達數千卷，啟發了包括加帕多家教父（巴西流、拿先斯的貴格利等）在內的眾多偉大思想家。'
+    ],
+    memorialSites: [
+      {
+        name: '推羅十字軍大教堂遺址 (Crusader Cathedral of Tyre)',
+        location: '黎巴嫩・推羅（蘇爾）',
+        connection: '俄利根在德修逼迫中受酷刑後，約於主後 253 年卒於推羅。中世紀朝聖者記載他的墳墓位於推羅大教堂內；這座教堂如今只剩遺址。推羅也是保羅第三次旅程返回耶路撒冷時停留七天、與門徒在海邊跪下禱告之地（徒 21:3-6）。',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/CrusaderCathedral_TyreSourLebanon_RomanDeckert07112019.jpg/960px-CrusaderCathedral_TyreSourLebanon_RomanDeckert07112019.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:CrusaderCathedral_TyreSourLebanon_RomanDeckert07112019.jpg',
+        credit: 'RomanDeckert / CC BY-SA 4.0'
+      }
     ]
   }
 ];

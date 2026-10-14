@@ -197,7 +197,7 @@ export default function App() {
             <div className="space-y-1">
               <p className="text-slate-300 font-semibold flex items-center justify-center sm:justify-start gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                保羅行蹤・希臘聖經歷史文化研經巡禮指南 (Paul&apos;s Footsteps Pilgrimage)
+                保羅行蹤・希臘聖經歷史體驗之旅 (Paul&apos;s Footsteps Journey)
               </p>
               <p className="text-slate-500 text-[11px]">
                 依據朝聖手冊原書架構打造：十天行程表、使徒四次旅程、聖像畫藝術、希臘羅馬百科與培靈詩歌

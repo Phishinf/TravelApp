@@ -134,7 +134,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             <div className="flex items-center gap-1.5 text-xs sm:text-sm">
               <span className="font-bold text-amber-200 hidden lg:inline">
-                保羅行蹤・希臘聖經歷史研經指南
+                保羅行蹤・希臘聖經歷史體驗之旅
               </span>
               <span className="text-slate-600 hidden lg:inline">/</span>
               {breadcrumb.group && (

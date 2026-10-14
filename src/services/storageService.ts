@@ -75,7 +75,7 @@ export const storageService = {
       {
         id: 'sample-entry-1',
         date: '2026-10-13',
-        dayNumber: 2,
+        dayNumber: 8,
         location: 'Kavala / Neapolis (尼亞波利舊港)',
         title: '佇立在歐洲宣教第一站海灣的默想',
         content: '今天在迦華拿聖尼古拉教堂看著巨大的馬賽克壁畫，心中深深被感動。保羅在特羅亞順服聖靈的引導，放下原先的宣教路線，毅然越洋來到這座港口。如果沒有當初的順服，福音何時才能傳到歐洲與更遠的地極？求主也賜我一顆敏銳順服的心。',

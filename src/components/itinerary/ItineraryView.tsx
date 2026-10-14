@@ -108,7 +108,7 @@ export const ItineraryView: React.FC<ItineraryViewProps> = ({
             <h2 className="text-base font-bold text-slate-100">十天行程日程選擇 (Day-by-Day Itinerary)</h2>
           </div>
           <span className="text-xs text-slate-400">
-            點擊切換每日時間表與研經主題
+            點擊切換每日時間表與體驗主題
           </span>
         </div>
 
@@ -201,7 +201,7 @@ export const ItineraryView: React.FC<ItineraryViewProps> = ({
         <div className="p-4 rounded-xl bg-slate-950/80 border-l-4 border-amber-500 shadow-inner">
           <div className="flex items-center gap-2 text-xs text-amber-400 font-semibold mb-1">
             <BookOpen className="w-3.5 h-3.5" />
-            <span>今日研經主題經文: {currentDay.themeVerse.ref}</span>
+            <span>今日主題經文: {currentDay.themeVerse.ref}</span>
           </div>
           <p className="text-sm text-slate-200 font-serif leading-relaxed italic">
             &quot;{currentDay.themeVerse.text}&quot;

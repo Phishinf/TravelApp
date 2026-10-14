@@ -247,13 +247,186 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
       },
       {
         subtitle: '其他必嚐美食',
-        content: '・希臘沙律（Horiatiki）：番茄、青瓜、洋蔥、橄欖配大塊菲達芝士。\n・煎烤芝士：外脆內軟，擠上檸檬汁食用。\n・烤肉串（Souvlaki）：串燒肉粒配蔬菜，是街頭最常見的小吃。'
+        content: '・希臘沙律（Horiatiki）：番茄、青瓜、洋蔥、橄欖配大塊菲達芝士。\n・煎芝士（Saganaki）：外脆內軟，擠上檸檬汁食用。\n・乳酪黃瓜醬（Tzatziki）：配肉串與麵包的經典醬料。\n・烤肉串（Souvlaki）：串燒肉粒配蔬菜，是街頭最常見的小吃。'
       },
       {
         subtitle: '特產與手信',
         content: '・橄欖油香皂：用橄欖油製作，具有潤膚、保濕作用。\n・Ouzo 酒：茴香味的開胃酒，在希臘和塞浦路斯十分熱銷。\n・天然海綿：富含海底礦物質，洗澡或洗臉可去角質。\n・初榨橄欖油與橄欖：希臘家家戶戶餐桌必備。'
       }
     ],
-    scripturalConnection: '橄欖樹是地中海世界最尋常的作物，保羅在羅馬書 11 章以「野橄欖枝接在好橄欖樹上」比喻外邦信徒蒙恩，品嚐當地橄欖時不妨默想這段經文。'
+    scripturalConnection: '橄欖樹是地中海世界最尋常的作物，保羅在羅馬書 11 章以「野橄欖枝接在好橄欖樹上」比喻外邦信徒蒙恩，品嚐當地橄欖時不妨默想這段經文。',
+    gallery: [
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Mousakas.jpg/960px-Mousakas.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Mousakas.jpg',
+        credit: 'Dieter Mueller / CC BY-SA 3.0',
+        titleZh: '木莎卡',
+        titleEn: 'Mousakas',
+        caption: '茄子、肉醬與白醬層層焗烤的希臘國菜，幾乎每家小酒館（Taverna）都有。',
+        recipe: {
+          servings: '6 人份',
+          time: '約 2 小時',
+          ingredients: [
+            '茄子 3 條（約 1 公斤），切 1 厘米厚片',
+            '馬鈴薯 2 個，切薄片（可省略）',
+            '牛或羊絞肉 500 克',
+            '洋蔥 1 個、蒜頭 2 瓣，切碎',
+            '番茄碎罐頭 1 罐（400 克）、番茄膏 1 湯匙',
+            '紅酒 100 毫升（可用清水代替）',
+            '肉桂粉 ½ 茶匙、多香果粉少許、乾牛至 1 茶匙',
+            '白醬：牛油 60 克、麵粉 60 克、牛奶 700 毫升、蛋黃 2 個、肉豆蔻少許',
+            '刨碎芝士（Kefalotyri 或巴馬臣）50 克',
+            '橄欖油、鹽、黑胡椒適量'
+          ],
+          steps: [
+            '茄子片撒鹽靜置 30 分鐘去苦水，抹乾後掃上橄欖油，以 200°C 焗 20 分鐘至軟身；馬鈴薯片同樣焗至半熟。',
+            '橄欖油炒香洋蔥與蒜，加入絞肉炒散至變色，倒入紅酒煮至酒精揮發。',
+            '加入番茄碎、番茄膏、肉桂、多香果粉與牛至，以鹽和胡椒調味，小火煮 20–30 分鐘至醬汁濃稠。',
+            '白醬：牛油溶化後加麵粉炒 1 分鐘，逐少加入溫牛奶不斷攪拌至濃稠；離火稍涼後拌入蛋黃、一半芝士與肉豆蔻。',
+            '焗盤底鋪馬鈴薯，再鋪一半茄子、全部肉醬、餘下茄子，最後倒上白醬並撒上餘下芝士。',
+            '以 180°C 焗 45 分鐘至表面金黃，取出靜置 20–30 分鐘再切件，切面才會整齊。'
+          ],
+          tip: '靜置是關鍵——希臘人常說木莎卡隔天吃更入味。'
+        }
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Horiatiki_salad.jpg/960px-Horiatiki_salad.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Horiatiki_salad.jpg',
+        credit: 'Scudsvlad / CC BY-SA 4.0',
+        titleZh: '希臘鄉村沙律',
+        titleEn: 'Horiatiki',
+        caption: '真正的希臘沙律沒有生菜：番茄、青瓜、洋蔥、橄欖，頂上一整塊菲達芝士。',
+        recipe: {
+          servings: '2–4 人份',
+          time: '15 分鐘',
+          ingredients: [
+            '熟番茄 3 個，切大塊',
+            '青瓜 1 條，切厚片',
+            '紅洋蔥 ½ 個，切薄圈',
+            '青椒 1 個，切圈',
+            '卡拉馬塔黑橄欖 1 把',
+            '菲達芝士（Feta）1 整塊約 150 克',
+            '特級初榨橄欖油 4 湯匙、紅酒醋 1 湯匙',
+            '乾牛至、海鹽適量；可加續隨子（酸豆）'
+          ],
+          steps: [
+            '番茄、青瓜、洋蔥與青椒放入大碗，撒少許海鹽輕拌。',
+            '加入橄欖，將整塊菲達芝士放在最上面（不要切碎）。',
+            '淋上紅酒醋與大量橄欖油，撒上乾牛至即成。'
+          ],
+          tip: '吃完別浪費碗底的番茄汁與橄欖油——用麵包蘸來吃才是希臘人的習慣。'
+        }
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Saganaki_made_with_Kefalograviera_cheese.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Saganaki_made_with_Kefalograviera_cheese.jpg',
+        credit: 'L.A. Foodie / CC BY 2.0',
+        titleZh: '煎芝士（薩甘納基）',
+        titleEn: 'Saganaki',
+        caption: '以小平底鍋（saganaki）煎得外脆內軟的芝士，擠上檸檬汁趁熱吃。',
+        recipe: {
+          servings: '2 人份（前菜）',
+          time: '10 分鐘',
+          ingredients: [
+            '硬身芝士（Kefalograviera、Kefalotyri 或哈羅米）1 塊，約 1.5 厘米厚',
+            '麵粉 2 湯匙',
+            '橄欖油 2–3 湯匙',
+            '檸檬 ½ 個',
+            '黑胡椒少許'
+          ],
+          steps: [
+            '芝士塊用清水沾濕，均勻沾上一層薄麵粉，拍去多餘的粉。',
+            '平底鍋以中大火燒熱橄欖油，放入芝士每面煎約 1–2 分鐘至金黃起脆殼。',
+            '起鍋立即擠上檸檬汁、撒黑胡椒，配麵包趁熱享用。'
+          ],
+          tip: '油要夠熱才下芝士，否則芝士會軟塌黏鍋。'
+        }
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Souvlaki_in_Athens.JPG/960px-Souvlaki_in_Athens.JPG',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Souvlaki_in_Athens.JPG',
+        credit: 'Miyagawa / CC BY-SA 4.0',
+        titleZh: '烤肉串',
+        titleEn: 'Souvlaki',
+        caption: '希臘最受歡迎的街頭小吃，可單吃肉串，或用皮塔餅包著乳酪黃瓜醬。',
+        recipe: {
+          servings: '4 人份',
+          time: '30 分鐘（另醃 2 小時）',
+          ingredients: [
+            '豬梅頭肉或雞腿肉 800 克，切 3 厘米方粒',
+            '橄欖油 4 湯匙、檸檬汁 2 湯匙',
+            '蒜頭 3 瓣，磨蓉',
+            '乾牛至 2 茶匙、鹽 1 茶匙、黑胡椒適量',
+            '竹籤或鐵籤 8 支（竹籤先浸水 30 分鐘）',
+            '配料：皮塔餅、番茄、洋蔥、乳酪黃瓜醬'
+          ],
+          steps: [
+            '肉粒與橄欖油、檸檬汁、蒜蓉、牛至、鹽和胡椒拌勻，冷藏醃 2 小時或過夜。',
+            '將肉粒串上籤子，每串約 5–6 粒。',
+            '以炭爐、坑紋鍋或焗爐 220°C 烤 10–12 分鐘，期間翻面，烤至表面微焦、內裡熟透。',
+            '皮塔餅稍烘熱，放上肉、番茄、洋蔥與乳酪黃瓜醬捲起即成。'
+          ]
+        }
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Tzatziki_meze_or_appetizer%2C_also_used_as_a_sauce.jpg/960px-Tzatziki_meze_or_appetizer%2C_also_used_as_a_sauce.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tzatziki_meze_or_appetizer,_also_used_as_a_sauce.jpg',
+        credit: 'Nikodem Nijaki / CC BY-SA 3.0',
+        titleZh: '乳酪黃瓜醬',
+        titleEn: 'Tzatziki',
+        caption: '濃稠希臘乳酪加青瓜與蒜頭，是燒烤肉串和麵包的最佳拍檔。',
+        recipe: {
+          servings: '約 2 杯',
+          time: '15 分鐘（另冷藏 1 小時）',
+          ingredients: [
+            '希臘乳酪（Greek yogurt，全脂）500 克',
+            '青瓜 1 條',
+            '蒜頭 2–3 瓣，磨蓉',
+            '特級初榨橄欖油 2 湯匙',
+            '白酒醋或檸檬汁 1 湯匙',
+            '新鮮蒔蘿或薄荷少許，切碎',
+            '鹽適量'
+          ],
+          steps: [
+            '青瓜刨絲，加少許鹽靜置 10 分鐘，再用紗布或雙手用力擠乾水分。',
+            '將乳酪、青瓜絲、蒜蓉、橄欖油、醋與香草拌勻，以鹽調味。',
+            '冷藏至少 1 小時讓味道融合，上桌前再淋少許橄欖油。'
+          ],
+          tip: '青瓜一定要擠乾，醬汁才不會出水變稀。'
+        }
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Kalymnos_sponges_1.jpg/960px-Kalymnos_sponges_1.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Kalymnos_sponges_1.jpg',
+        credit: 'kallerna / CC BY-SA 3.0',
+        titleZh: '天然海綿',
+        titleEn: 'Natural Sea Sponges',
+        caption: '多德卡尼斯群島的卡林諾斯島（Kalymnos）以潛水採海綿聞名，富含海底礦物質，洗澡洗臉可去角質。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Very_rare_ouzo_brands.jpg/960px-Very_rare_ouzo_brands.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Very_rare_ouzo_brands.jpg',
+        credit: 'Ioannis Protonotarios / CC BY-SA 4.0',
+        titleZh: 'Ouzo 茴香酒',
+        titleEn: 'Ouzo',
+        caption: '茴香味開胃酒，加冰或清水後會變成乳白色。圖為萊斯博斯島小酒館裡的地方小酒廠品牌——萊斯博斯正是 Ouzo 的故鄉。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Oliivi%C3%B6ljysaippua.JPG/960px-Oliivi%C3%B6ljysaippua.JPG',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Oliivi%C3%B6ljysaippua.JPG',
+        credit: 'Tommi Nummelin / CC BY-SA 3.0',
+        titleZh: '橄欖油香皂',
+        titleEn: 'Olive Oil Soap',
+        caption: '以橄欖油製成，潤膚保濕、溫和不刺激，輕巧耐放，是最受歡迎的手信之一。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Some_of_my_olives_ready_for_oil_at_the_mill._Drosia._Greece.jpg/960px-Some_of_my_olives_ready_for_oil_at_the_mill._Drosia._Greece.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Some_of_my_olives_ready_for_oil_at_the_mill._Drosia._Greece.jpg',
+        credit: 'Jebulon / CC0',
+        titleZh: '橄欖與初榨橄欖油',
+        titleEn: 'Olives & Olive Oil',
+        caption: '剛採收、等待送往油坊榨油的希臘橄欖。選購時認明「Extra Virgin」與產地標示。'
+      }
+    ]
   }
 ];

@@ -141,6 +141,25 @@ export interface HistoricalTopic {
   scripturalConnection?: string;
   imageUrl?: string;
   imageCaption?: string;
+  gallery?: TopicGalleryItem[];
+}
+
+export interface Recipe {
+  servings: string;
+  time: string;
+  ingredients: string[];
+  steps: string[];
+  tip?: string;
+}
+
+export interface TopicGalleryItem {
+  imageUrl: string;
+  sourceUrl: string;
+  credit: string;
+  titleZh: string;
+  titleEn: string;
+  caption: string;
+  recipe?: Recipe;
 }
 
 export interface FatherMartyr {
@@ -154,6 +173,16 @@ export interface FatherMartyr {
   keyWorksOrConfession: string;
   quotesOrEvents: string[];
   imageUrl?: string;
+  memorialSites?: MemorialSite[];
+}
+
+export interface MemorialSite {
+  name: string;
+  location: string;
+  connection: string;
+  imageUrl: string;
+  sourceUrl: string;
+  credit: string;
 }
 
 export interface SacredArtConcept {

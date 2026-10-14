@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { HistoricalTopic } from '../../types';
+import React, { useEffect, useState } from 'react';
+import { HistoricalTopic, TopicGalleryItem } from '../../types';
 import { historyEncyclopediaData } from '../../data/historyEncyclopediaData';
 import { 
   Scroll, 
@@ -12,7 +12,10 @@ import {
   ChevronUp,
   Clock,
   Compass,
-  UtensilsCrossed
+  UtensilsCrossed,
+  ChefHat,
+  Users,
+  X
 } from 'lucide-react';
 
 export const HistoryView: React.FC = () => {
@@ -31,6 +34,17 @@ export const HistoryView: React.FC = () => {
   const filteredTopics = historyEncyclopediaData.filter((topic) => {
     return selectedCategory === 'all' || topic.category === selectedCategory;
   });
+
+  const [recipeItem, setRecipeItem] = useState<TopicGalleryItem | null>(null);
+
+  useEffect(() => {
+    if (!recipeItem) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setRecipeItem(null);
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [recipeItem]);
 
   const toggleExpand = (id: string) => {
     setExpandedTopicId(expandedTopicId === id ? null : id);
@@ -149,6 +163,49 @@ export const HistoryView: React.FC = () => {
                     ))}
                   </div>
 
+                  {/* Photo Gallery (dishes open a recipe) */}
+                  {topic.gallery && topic.gallery.length > 0 && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {topic.gallery.map((item) => (
+                        <figure
+                          key={item.imageUrl}
+                          className="rounded-xl bg-slate-900/80 border border-slate-800 overflow-hidden flex flex-col"
+                        >
+                          <img
+                            src={item.imageUrl}
+                            alt={`${item.titleZh} (${item.titleEn})`}
+                            loading="lazy"
+                            className="w-full aspect-[4/3] object-cover bg-slate-950"
+                          />
+                          <figcaption className="p-4 space-y-1.5 flex-1 flex flex-col">
+                            <div className="flex items-baseline gap-2 flex-wrap">
+                              <h4 className="text-sm font-bold text-amber-300">{item.titleZh}</h4>
+                              <span className="text-[11px] text-slate-400 font-serif">{item.titleEn}</span>
+                            </div>
+                            <p className="text-xs text-slate-300 leading-relaxed flex-1">{item.caption}</p>
+                            {item.recipe && (
+                              <button
+                                onClick={() => setRecipeItem(item)}
+                                className="mt-2 self-start flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold transition cursor-pointer"
+                              >
+                                <ChefHat className="w-3.5 h-3.5" />
+                                查看食譜
+                              </button>
+                            )}
+                            <a
+                              href={item.sourceUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="pt-1 text-[10px] text-slate-500 hover:text-amber-300 underline"
+                            >
+                              圖片：{item.credit}
+                            </a>
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  )}
+
                   {/* Key Figures Pill Bar */}
                   {topic.keyFigures && topic.keyFigures.length > 0 && (
                     <div className="pt-2 flex items-center gap-2 flex-wrap">
@@ -169,6 +226,83 @@ export const HistoryView: React.FC = () => {
           );
         })}
       </div>
+
+      {/* Recipe Modal */}
+      {recipeItem?.recipe && (
+        <div
+          className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4"
+          onClick={() => setRecipeItem(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${recipeItem.titleZh} 食譜`}
+        >
+          <div
+            className="bg-slate-900 border border-amber-900/50 rounded-2xl w-full max-w-2xl max-h-[90vh] shadow-2xl overflow-y-auto text-slate-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative">
+              <img
+                src={recipeItem.imageUrl}
+                alt={recipeItem.titleZh}
+                className="w-full h-48 sm:h-56 object-cover"
+              />
+              <button
+                onClick={() => setRecipeItem(null)}
+                className="absolute top-3 right-3 p-2 rounded-xl bg-slate-950/80 text-slate-200 hover:bg-slate-800 cursor-pointer"
+                aria-label="關閉"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="p-6 space-y-5">
+              <div>
+                <h3 className="text-xl font-bold text-slate-100 flex items-center gap-2">
+                  <ChefHat className="w-5 h-5 text-amber-400" />
+                  {recipeItem.titleZh} 食譜
+                  <span className="text-sm font-normal text-slate-400 font-serif">{recipeItem.titleEn}</span>
+                </h3>
+                <div className="flex items-center gap-4 text-xs text-amber-300 mt-2">
+                  <span className="flex items-center gap-1"><Users className="w-3.5 h-3.5" />{recipeItem.recipe.servings}</span>
+                  <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" />{recipeItem.recipe.time}</span>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="text-xs font-bold text-amber-400 uppercase tracking-wider">材料</h4>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-300">
+                  {recipeItem.recipe.ingredients.map((ing, idx) => (
+                    <li key={idx} className="flex gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 flex-shrink-0" />
+                      <span>{ing}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="text-xs font-bold text-amber-400 uppercase tracking-wider">做法</h4>
+                <ol className="space-y-2.5">
+                  {recipeItem.recipe.steps.map((step, idx) => (
+                    <li key={idx} className="flex gap-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                      <span className="w-6 h-6 rounded-full bg-amber-950 border border-amber-700 text-amber-300 text-xs font-bold flex items-center justify-center flex-shrink-0">
+                        {idx + 1}
+                      </span>
+                      <span className="pt-0.5">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {recipeItem.recipe.tip && (
+                <div className="p-3 rounded-xl bg-amber-950/30 border border-amber-800/60 text-xs sm:text-sm text-amber-200">
+                  <span className="font-bold">小貼士：</span>{recipeItem.recipe.tip}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
