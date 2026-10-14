@@ -11,7 +11,8 @@ import {
   ChevronDown, 
   ChevronUp,
   Clock,
-  Compass
+  Compass,
+  UtensilsCrossed
 } from 'lucide-react';
 
 export const HistoryView: React.FC = () => {
@@ -24,6 +25,7 @@ export const HistoryView: React.FC = () => {
     { id: 'polis', label: '城邦制度 (Greek Polis)', icon: Landmark },
     { id: 'hellenistic', label: '希臘化時期 (Hellenistic Era)', icon: Globe2 },
     { id: 'roman-emperors', label: '羅馬皇帝與帝國 (Roman Emperors)', icon: Crown },
+    { id: 'cuisine', label: '美食與特產 (Cuisine & Specialties)', icon: UtensilsCrossed },
   ];
 
   const filteredTopics = historyEncyclopediaData.filter((topic) => {
@@ -45,7 +47,7 @@ export const HistoryView: React.FC = () => {
           </h2>
         </div>
         <p className="text-xs sm:text-sm text-slate-400 mt-1">
-          涵蓋古希臘文明、城邦制度、亞歷山大希臘化擴張與羅馬帝國歷任皇帝統治背景，理解福音降臨的歷史土壤
+          涵蓋古希臘文明與藝術、城邦戰爭、亞歷山大希臘化擴張、馬加比起義與羅馬帝國歷任皇帝統治背景，理解福音降臨的歷史土壤；另附希臘美食與特產
         </p>
       </div>
 

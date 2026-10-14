@@ -57,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
       case 'hymns':
         return { group: '信徒活動', current: '培靈詩歌' };
       case 'journal':
-        return { group: '信徒活動', current: '研經日誌' };
+        return { group: '信徒活動', current: '讀經日誌' };
       default:
         return { group: null, current: '行程' };
     }

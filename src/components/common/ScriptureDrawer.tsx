@@ -194,7 +194,7 @@ export const ScriptureDrawer: React.FC<ScriptureDrawerProps> = ({
                       onClose();
                     }}
                     className="p-2 rounded-lg bg-amber-900/40 hover:bg-amber-900/70 text-amber-300 border border-amber-700/50 transition cursor-pointer flex items-center gap-1 text-xs"
-                    title="引導至研經日誌"
+                    title="引導至讀經日誌"
                   >
                     <Bookmark className="w-3.5 h-3.5" />
                     <span>記入日誌</span>

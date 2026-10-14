@@ -135,7 +135,7 @@ export const JournalView: React.FC<JournalViewProps> = ({
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-amber-400" />
             <h2 className="text-xl sm:text-2xl font-bold text-slate-100">
-              巡禮靈修研經日誌 (Study Notes &amp; Pilgrimage Journal)
+              巡禮靈修讀經日誌 (Study Notes &amp; Pilgrimage Journal)
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-slate-400 mt-1">

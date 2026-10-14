@@ -60,7 +60,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   // Dropdown groups configuration as requested:
   // 1. "聖景足跡": 聖經景點, 保羅行程
   // 2. "教會歷史": 教父殉道, 聖像藝術, 教會建築
-  // 3. "信徒活動": 培靈詩歌, 研經日誌
+  // 3. "信徒活動": 培靈詩歌, 讀經日誌
   const navGroups: NavGroup[] = [
     {
       groupId: 'holy-sites',
@@ -90,7 +90,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       groupIcon: Activity,
       items: [
         { id: 'hymns', labelZh: '培靈詩歌', labelEn: 'Devotional Hymns', icon: Music },
-        { id: 'journal', labelZh: '研經日誌', labelEn: 'Study Notes & Journal', icon: BookOpen },
+        { id: 'journal', labelZh: '讀經日誌', labelEn: 'Study Notes & Journal', icon: BookOpen },
       ],
     },
   ];
@@ -328,7 +328,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             );
           })}
 
-          {/* 5. Group 3: 信徒活動 (Dropdown) -> 培靈詩歌, 研經日誌 */}
+          {/* 5. Group 3: 信徒活動 (Dropdown) -> 培靈詩歌, 讀經日誌 */}
           {navGroups.slice(2, 3).map((group) => {
             const GroupIcon = group.groupIcon;
             const isOpen = openGroups[group.groupId];

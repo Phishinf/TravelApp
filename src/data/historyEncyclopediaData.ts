@@ -38,6 +38,34 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
     scripturalConnection: '希臘語（通用希臘語 Koine Greek）成為新約聖經寫作的媒介，使使徒保羅能走遍愛琴海各城向受希臘哲學薰陶的知識分子與市民自由傳講天國奧秘。'
   },
   {
+    id: 'ancient-greek-art',
+    category: 'greek-culture',
+    titleEn: 'Ancient Greek Art: Source of Western Art',
+    titleZh: '古希臘藝術：西方藝術的源頭',
+    period: '主前 15 世紀 - 主前 1 世紀',
+    leadSummary: '古希臘藝術盛行於主前 15 至主前 1 世紀，被視為西方藝術的主要源頭。在亞歷山大帝國建立後，古希臘藝術更是向東方世界傳播；在羅馬征服希臘後，又被羅馬人效仿和吸收。在古希臘神話「神人同形同性」的理念影響下，藝術家按照真實的人形象來雕刻神像，將單純的「美」從政治、社會、倫理與道德的紛雜中淨化為單純的美的層次。',
+    details: [
+      {
+        subtitle: '荷馬時期 (主前 12 - 前 7 世紀)',
+        content: '也稱「黑暗時期」。特洛伊戰爭後，愛琴海附近文明趨於衰退，希臘人已開始在陶器上用幾何狀線性紋、鳥獸紋和人物作裝飾。'
+      },
+      {
+        subtitle: '古風時期 (主前 7 - 前 6 世紀)',
+        content: '多立克柱式與愛奧尼柱式分別在希臘本土（西部）與小亞細亞沿岸（東部）產生；本地出產的大理石和黏土石材取代了木質材料。雕像面帶標誌性的「古風的微笑」（Archaic Smile）。'
+      },
+      {
+        subtitle: '古典時期 (主前 5 - 前 4 世紀)',
+        content: '奧林匹亞的宙斯神廟、帕埃斯圖姆（Paestum）的赫拉神廟、雅典的巴特農神廟相繼興建。主前 4 世紀產生了三大柱式中的最後一種——科林斯柱式。'
+      },
+      {
+        subtitle: '希臘化時期 (主前 4 - 前 1 世紀)',
+        content: '別迦摩（Pergamon）成為希臘藝術中心，主前 2 世紀興建了著名的別迦摩宙斯祭壇；城市中心由神廟轉變為貿易廣場。因解剖學及人體結構理解的進步，紀念人、事、物的雕刻藝術開始繁盛，代表作如羅浮宮的《薩莫色雷斯勝利女神像》。'
+      }
+    ],
+    keyFigures: ['菲迪亞斯 (Phidias)', '波利克里托斯 (Polykleitos)', '普拉克西特列斯 (Praxiteles)'],
+    scripturalConnection: '保羅在雅典「看見滿城都是偶像，就心裡著急」（徒 17:16），所見正是古典時期的神廟與神像；別迦摩宙斯祭壇則常被認為與啟示錄 2:13 所說「撒但座位之處」相關。'
+  },
+  {
     id: 'greek-city-states-polis',
     category: 'polis',
     titleEn: 'Ancient Greek City-States (Polis)',
@@ -66,6 +94,26 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
     scripturalConnection: '保羅所傳道的腓立比、帖撒羅尼迦、雅典、哥林多，均承襲了古希臘城邦特質，市民大會、阿哥拉（市集）與自治議會構成了早期福音辯論的公眾講台。'
   },
   {
+    id: 'peloponnesian-war',
+    category: 'polis',
+    titleEn: 'Ancient Greek Wars: The Peloponnesian War',
+    titleZh: '古希臘戰爭：伯羅奔尼撒戰爭',
+    period: '主前 431 - 主前 335 年',
+    leadSummary: '波希戰爭以後，希臘各城邦為爭奪霸權，建立了以雅典為首的提洛同盟、以斯巴達為首的伯羅奔尼撒同盟。主前 431 年引發了伯羅奔尼撒戰爭，希臘各城邦陷入混戰之中。',
+    details: [
+      {
+        subtitle: '希臘內戰的影響 (431 - 404 BC)',
+        content: '內戰從主前 431 年持續到主前 404 年，不單止結束了希臘的民主時代，也結束了希臘的經典黃金時代。每個希臘城邦出現分裂，導致窮人與富人、寡頭派與民主派的衝突，各族群不再團結，不再有認同感。'
+      },
+      {
+        subtitle: '古典時代的終結 (335 BC)',
+        content: '主前 335 年，希臘北部馬其頓國王亞歷山大大帝夷平底比斯，除斯巴達外的希臘眾城邦降伏，古典時代結束，希臘化時代開始。'
+      }
+    ],
+    keyFigures: ['伯里克利 (Pericles)', '修昔底德 (Thucydides)', '來山得 (Lysander)'],
+    scripturalConnection: '城邦長年內耗後的分裂，為馬其頓統一希臘、繼而將希臘語言文化傳遍近東鋪路——這正是新約時代保羅能以同一語言向各城傳道的歷史背景。'
+  },
+  {
     id: 'hellenistic-alexander',
     category: 'hellenistic',
     titleEn: 'Alexander the Great & Hellenistic Era',
@@ -76,6 +124,14 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
       {
         subtitle: '帝國的崛起與東征 (338 - 324 BC)',
         content: '主前338年馬其頓擊敗希臘聯軍，取得對整個希臘的控制權。主前336年菲力浦遇刺身亡，其子亞歷山大即位後迅速平定起義。主前334年開始東討西征，三十歲時已經建立當時疆域最大的帝國，包括希臘、小亞細亞、兩河流域、阿富汗及印度西北部。'
+      },
+      {
+        subtitle: '東征大事年表 (333 - 327 BC)',
+        content: '・主前333年：伊蘇斯戰役擊敗波斯王大流士三世，波斯逐漸衰亡；隨後征服敘利亞、腓尼基。\n・主前332年：征服埃及，在尼羅河口建築新城，起名亞歷山大。\n・主前331年：渡過幼發拉底河與底格里斯河，於高加米拉擊敗大流士三世的大軍；翌年（主前330年）大流士被其部下所殺，波斯滅亡。\n・主前327年：進兵印度，因兵士轉戰連年，不適應印度多雨、酷熱天氣而撤退。'
+      },
+      {
+        subtitle: '擴張的影響',
+        content: '擴土導致東西文化融合，建立起至少 20 座以其命名的城市，最著名的就是埃及的亞歷山大城。隨著拓展殖民地，希臘文明向東傳播，開啟了希臘化時代。'
       },
       {
         subtitle: '亞歷山大大帝之死 (323 BC)',
@@ -92,6 +148,66 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
     ],
     keyFigures: ['菲力浦二世 (Philip II)', '亞歷山大大帝 (Alexander the Great)', '卡山德 (Cassander)', '塞琉古一世 (Seleucus I)', '托勒密一世 (Ptolemy I)'],
     scripturalConnection: '但以理書第七與八章中公山羊與豹（四個翅膀與四個頭）的歷史異象，精準預言了亞歷山大與其帝國分裂為四國的歷史軌跡。'
+  },
+  {
+    id: 'hellenistic-society',
+    category: 'hellenistic',
+    titleEn: 'Hellenistic Society: Politics, Culture, Philosophy & Religion',
+    titleZh: '希臘化時代的社會、哲學與宗教',
+    period: '主前 323 年 - 主前 30 年',
+    leadSummary: '從主前 323 年亞歷山大去世，到主前 30 年羅馬征服托勒密王朝統治下的埃及，這段時期古希臘文明主宰整個地中海東部沿岸，故稱「希臘化時代」。帝國分裂後，猶太人聚居的以色列地區先後處於托勒密及塞琉古王朝境內。',
+    details: [
+      {
+        subtitle: '政治 (Politics)',
+        content: '君主通常以神權或半神權作為號召。亞歷山大大帝在埃及以「上帝之子」的身分統治，在希臘被美化為神來崇拜。'
+      },
+      {
+        subtitle: '文化 (Culture)',
+        content: '亞歷山大征討亞非各國後，古希臘語成為國際語言，令希臘人與西亞、埃及各地區民族在信仰、藝術及文學上都產生了融合。加上各王國君王推廣與資助，興起了亞歷山大城、別迦摩、安提阿、雅典等文化都市。'
+      },
+      {
+        subtitle: '哲學三大學派 (Philosophy)',
+        content: '・伊比鳩魯學派：追求快樂，但需具備獨立、公平正直、寧靜的心態。\n・斯多亞（斯多葛）學派：主張抑制內心的慾望，寬恕待人、重視倫理。\n・犬儒學派：提倡回歸自然、清心寡欲；後來羅馬和基督教的苦修主義均受此學派影響。'
+      },
+      {
+        subtitle: '宗教 (Religion)',
+        content: '由於城邦政治沒落及東方宗教影響（如埃及女神艾西斯、波斯的祆教），傳統信仰的影響力日漸減弱；猶太教和後來的基督教亦隨著猶太人的移居在下層階級中傳播。'
+      },
+      {
+        subtitle: '時代的結束 (31 - 30 BC)',
+        content: '主前 31 年屋大維在亞克興海戰擊敗安東尼和托勒密最後一任女王克麗奧佩脫拉七世的聯軍，結束羅馬內戰；翌年進入埃及，最後一個希臘化王國「托勒密王朝」被羅馬消滅，結束了約 300 年的希臘化時代。'
+      },
+      {
+        subtitle: '小百科：七十士譯本 (Septuagint, LXX)',
+        content: '1. 舊約聖經最早的希臘文譯本，約主前三至一世紀譯成。\n2. 相傳由 72 位翻譯者在埃及亞歷山大城合譯而得名。\n3. 為散居外地、不再說希伯來語的猶太人所採用。\n4. 除希伯來聖經正典外，也收錄了一些被稱為「次經」的書卷；新約聖經不少引用舊約的經文均出自此譯本，後來再譯成多種文字。\n5. 原書已失傳，現存的是主後四至五世紀的抄本（如西乃抄本、梵蒂岡抄本）。'
+      }
+    ],
+    keyFigures: ['伊比鳩魯 (Epicurus)', '芝諾 (Zeno of Citium)', '第歐根尼 (Diogenes)', '克麗奧佩脫拉七世 (Cleopatra VII)', '屋大維 (Octavian)'],
+    scripturalConnection: '保羅在雅典亞略巴古「有以彼古羅（伊比鳩魯）和斯多亞兩門的學士與他爭論」（徒 17:18）；他在講道中更引用希臘詩人的話「我們也是他所生的」（徒 17:28），正是在希臘化思想世界中傳揚福音的典範。'
+  },
+  {
+    id: 'seleucid-maccabees',
+    category: 'hellenistic',
+    titleEn: 'The Seleucid Kingdom & the Maccabean Revolt',
+    titleZh: '塞琉古王朝與猶太馬加比起義',
+    period: '主前 332 年 - 主前 63 年',
+    leadSummary: '主前 332 年亞歷山大大帝征服巴勒斯坦地區，希臘語言和文化、社會及政治制度滲透到當地生活中。亞歷山大對殖民地不同宗教文化持包容態度，猶太人和其他民族仍能享有信仰自由；他死後此地先由埃及托勒密王朝管治，後由敘利亞的塞琉古王朝接管。',
+    details: [
+      {
+        subtitle: '安提阿古四世的逼迫 (167 BC)',
+        content: '塞琉古王安提阿古四世（Antiochus IV Epiphanes，主前 175 - 164 年在位）開始強迫猶太人拜偶像、接受希臘文化、禁止割禮和守安息日等，企圖把猶太人希臘化，並將耶路撒冷聖殿用於祭祀宙斯，引發了由祭司馬加比家族領導的猶太人起義。'
+      },
+      {
+        subtitle: '重奪聖殿與光明節 (164 BC)',
+        content: '猶太人成功奪回耶路撒冷聖殿並重新潔淨獻殿，使猶太地區免於希臘化。猶太人至今以八天的「光明節」（Hanukkah，又稱修殿節）點燃九枝燈台記念此事。'
+      },
+      {
+        subtitle: '哈斯摩尼（馬加比）皇朝',
+        content: '起義後猶太人取得了相對獨立，由非大衛家系的祭司兼作君王，史稱「馬加比皇朝」（哈斯摩尼王朝），直到主前 63 年羅馬將軍龐培攻佔耶路撒冷為止。'
+      }
+    ],
+    keyFigures: ['安提阿古四世 (Antiochus IV Epiphanes)', '瑪他提亞 (Mattathias)', '猶大・馬加比 (Judas Maccabeus)'],
+    scripturalConnection: '但以理書 11 章所預言「施行毀壞可憎的」（但 11:31）常被解為安提阿古四世褻瀆聖殿；約翰福音 10:22 記載「在耶路撒冷有修殿節」，主耶穌也在這記念重獻聖殿的節期中於聖殿所羅門廊下行走。'
   },
   {
     id: 'roman-emperors',
@@ -116,5 +232,28 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
     ],
     keyFigures: ['圖拉真 (Trajan)', '安敦尼・畢尤 (Antoninus Pius)', '奧勒流 (Marcus Aurelius)', '以格那提 (Ignatius)', '坡旅甲 (Polycarp)', '猶斯丁 (Justin Martyr)'],
     scripturalConnection: '啟示錄與彼得前書所勉勵的受苦與試煉，正是初期信徒在羅馬帝國法律與社會壓力下堅守信仰的真實寫照。'
+  },
+  {
+    id: 'greek-cuisine',
+    category: 'cuisine',
+    titleEn: 'Greece: Cuisine & Local Specialties',
+    titleZh: '希臘美食與特產',
+    period: '旅途實用',
+    leadSummary: '希臘美食是目前世界上最健康、營養均衡的飲食典範之一：新鮮優質食材、正確使用香料、烹飪簡單化，有效降低患心血管病、糖尿病和其他疾病的風險；肉類攝取以魚肉為主，少吃厚重脂肪的肉類；穀物、豆類、水果、蜂蜜和蔬菜是每日必備，搭配優質乳製品；橄欖油是烹飪菜餚的主要角色，所有菜餚都能與美味葡萄酒搭配。',
+    details: [
+      {
+        subtitle: '木莎卡 (Mousakas)',
+        content: '名稱源自阿拉伯語 musaqqa‘a，原意為「加水」。一種茄子肉醬千層批（希臘茄盒），主要使用炒茄子與番茄或櫛瓜，通常會加入碎肉，再鋪上白醬焗烤。流行於巴爾幹地區、中東等地，最知名的為希臘木莎卡。'
+      },
+      {
+        subtitle: '其他必嚐美食',
+        content: '・希臘沙律（Horiatiki）：番茄、青瓜、洋蔥、橄欖配大塊菲達芝士。\n・煎烤芝士：外脆內軟，擠上檸檬汁食用。\n・烤肉串（Souvlaki）：串燒肉粒配蔬菜，是街頭最常見的小吃。'
+      },
+      {
+        subtitle: '特產與手信',
+        content: '・橄欖油香皂：用橄欖油製作，具有潤膚、保濕作用。\n・Ouzo 酒：茴香味的開胃酒，在希臘和塞浦路斯十分熱銷。\n・天然海綿：富含海底礦物質，洗澡或洗臉可去角質。\n・初榨橄欖油與橄欖：希臘家家戶戶餐桌必備。'
+      }
+    ],
+    scripturalConnection: '橄欖樹是地中海世界最尋常的作物，保羅在羅馬書 11 章以「野橄欖枝接在好橄欖樹上」比喻外邦信徒蒙恩，品嚐當地橄欖時不妨默想這段經文。'
   }
 ];

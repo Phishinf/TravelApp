@@ -128,7 +128,7 @@ export interface PaulJourneyStage {
 
 export interface HistoricalTopic {
   id: string;
-  category: 'greek-culture' | 'polis' | 'hellenistic' | 'roman-emperors';
+  category: 'greek-culture' | 'polis' | 'hellenistic' | 'roman-emperors' | 'cuisine';
   titleEn: string;
   titleZh: string;
   period: string;
@@ -173,6 +173,17 @@ export interface SacredArtConcept {
   }[];
   imageUrl?: string;
   caption?: string;
+  gallery?: IconGalleryItem[];
+}
+
+export interface IconGalleryItem {
+  imageUrl: string;
+  sourceUrl: string;
+  titleZh: string;
+  titleEn: string;
+  era: string;
+  location: string;
+  story: string;
 }
 
 export interface ChurchArchitectureStyle {
