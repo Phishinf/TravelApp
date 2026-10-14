@@ -15,7 +15,8 @@ import {
   UtensilsCrossed,
   ChefHat,
   Users,
-  X
+  X,
+  Map as MapIcon
 } from 'lucide-react';
 
 export const HistoryView: React.FC = () => {
@@ -169,14 +170,37 @@ export const HistoryView: React.FC = () => {
                       {topic.gallery.map((item) => (
                         <figure
                           key={item.imageUrl}
-                          className="rounded-xl bg-slate-900/80 border border-slate-800 overflow-hidden flex flex-col"
+                          className={`rounded-xl bg-slate-900/80 border border-slate-800 overflow-hidden flex flex-col ${
+                            item.isMap ? 'sm:col-span-2 lg:col-span-3' : ''
+                          }`}
                         >
-                          <img
-                            src={item.imageUrl}
-                            alt={`${item.titleZh} (${item.titleEn})`}
-                            loading="lazy"
-                            className="w-full aspect-[4/3] object-cover bg-slate-950"
-                          />
+                          {item.isMap ? (
+                            <a
+                              href={item.sourceUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="relative block bg-slate-100 cursor-zoom-in"
+                              title="開啟原圖放大檢視"
+                            >
+                              <img
+                                src={item.imageUrl}
+                                alt={`${item.titleZh} (${item.titleEn})`}
+                                loading="lazy"
+                                className="w-full h-auto"
+                              />
+                              <span className="absolute top-2 left-2 flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-950/85 text-amber-300 border border-amber-800/60">
+                                <MapIcon className="w-3 h-3" />
+                                地圖・點擊放大
+                              </span>
+                            </a>
+                          ) : (
+                            <img
+                              src={item.imageUrl}
+                              alt={`${item.titleZh} (${item.titleEn})`}
+                              loading="lazy"
+                              className={`w-full aspect-[4/3] bg-slate-950 ${item.portrait ? 'object-contain' : 'object-cover'}`}
+                            />
+                          )}
                           <figcaption className="p-4 space-y-1.5 flex-1 flex flex-col">
                             <div className="flex items-baseline gap-2 flex-wrap">
                               <h4 className="text-sm font-bold text-amber-300">{item.titleZh}</h4>

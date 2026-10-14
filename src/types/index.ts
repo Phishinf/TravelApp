@@ -165,6 +165,8 @@ export interface TopicGalleryItem {
   titleZh: string;
   titleEn: string;
   caption: string;
+  portrait?: boolean;
+  isMap?: boolean;
   recipe?: Recipe;
 }
 

@@ -63,7 +63,86 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
       }
     ],
     keyFigures: ['菲迪亞斯 (Phidias)', '波利克里托斯 (Polykleitos)', '普拉克西特列斯 (Praxiteles)'],
-    scripturalConnection: '保羅在雅典「看見滿城都是偶像，就心裡著急」（徒 17:16），所見正是古典時期的神廟與神像；別迦摩宙斯祭壇則常被認為與啟示錄 2:13 所說「撒但座位之處」相關。'
+    scripturalConnection: '保羅在雅典「看見滿城都是偶像，就心裡著急」（徒 17:16），所見正是古典時期的神廟與神像；別迦摩宙斯祭壇則常被認為與啟示錄 2:13 所說「撒但座位之處」相關。',
+    gallery: [
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/The_Dipylon_Amphora_%28National_Archaeological_Museum_of_Athens%2C_1-31-2023%29.jpg/960px-The_Dipylon_Amphora_%28National_Archaeological_Museum_of_Athens%2C_1-31-2023%29.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:The_Dipylon_Amphora_(National_Archaeological_Museum_of_Athens,_1-31-2023).jpg',
+        credit: 'George E. Koronaios / CC BY-SA 4.0',
+        titleZh: '迪皮隆雙耳瓶',
+        titleEn: 'Dipylon Amphora',
+        caption: '荷馬時期（幾何風格）・約主前 750 年。瓶身滿佈幾何狀線紋、鳥獸紋，中央描繪送葬哀悼的人物——正是書中所說「在陶器上用幾何狀線性紋、鳥獸紋和人作裝飾」。現藏雅典國家考古博物館。',
+        portrait: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Kroisos_Kouros%2C_Atenas%2C_Grecia%2C_2019_02.jpg/960px-Kroisos_Kouros%2C_Atenas%2C_Grecia%2C_2019_02.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Kroisos_Kouros,_Atenas,_Grecia,_2019_02.jpg',
+        credit: 'Benjamín Núñez González / CC BY-SA 4.0',
+        titleZh: '克羅伊索斯少年像',
+        titleEn: 'Kroisos Kouros',
+        caption: '古風時期・約主前 530 年。以大理石取代木材雕成，嘴角微揚的「古風的微笑」（Archaic Smile）是這時期雕像的招牌表情。現藏雅典國家考古博物館。',
+        portrait: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Temple_of_Hera_%28Paestum%29%2C_East_view.jpg/960px-Temple_of_Hera_%28Paestum%29%2C_East_view.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Temple_of_Hera_(Paestum),_East_view.jpg',
+        credit: 'PaestumPaestum / CC BY-SA 4.0',
+        titleZh: '帕埃斯圖姆赫拉神廟',
+        titleEn: 'Temple of Hera, Paestum',
+        caption: '位於南義大利「大希臘」殖民城市，是保存最完整的多立克柱式神廟之一：柱身粗壯、沒有柱礎、柱頭簡樸如圓墊。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Erechtheion%2C_North_Porch%2C_columns%2C_225005.jpg/960px-Erechtheion%2C_North_Porch%2C_columns%2C_225005.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Erechtheion,_North_Porch,_columns,_225005.jpg',
+        credit: 'Zde / CC BY-SA 4.0',
+        titleZh: '伊瑞克提翁神廟北門廊',
+        titleEn: 'Erechtheion, North Porch',
+        caption: '雅典衛城・主前 5 世紀末。典型的愛奧尼柱式：柱身修長、有柱礎，柱頭兩側捲成渦旋紋。參觀衛城時可與帕德嫩的多立克柱比較。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/A_restored_column_of_the_Temple_of_Zeus_in_Olympia_on_October_14%2C_2020.jpg/960px-A_restored_column_of_the_Temple_of_Zeus_in_Olympia_on_October_14%2C_2020.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:A_restored_column_of_the_Temple_of_Zeus_in_Olympia_on_October_14,_2020.jpg',
+        credit: 'George E. Koronaios / CC BY-SA 4.0',
+        titleZh: '奧林匹亞宙斯神廟',
+        titleEn: 'Temple of Zeus, Olympia',
+        caption: '古典時期・約主前 470–456 年。神廟內曾供奉菲迪亞斯所造的宙斯黃金象牙巨像（古代世界七大奇蹟之一），今僅存一根重新豎立的巨柱。',
+        portrait: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/960px-The_Parthenon_in_Athens.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg',
+        credit: 'Steve Swayne / CC BY 2.0',
+        titleZh: '巴特農（帕德嫩）神廟',
+        titleEn: 'Parthenon, Athens',
+        caption: '古典時期・主前 447–432 年。多立克柱式的巔峰之作，奉獻給雅典守護女神雅典娜。保羅在雅典「看見滿城都是偶像」時，它就矗立在亞略巴古旁的衛城上。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Choragic_Monument_of_Lysicrates_in_2021.jpg/960px-Choragic_Monument_of_Lysicrates_in_2021.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Choragic_Monument_of_Lysicrates_in_2021.jpg',
+        credit: 'Isabeau / CC BY-SA 4.0',
+        titleZh: '利西克拉特合唱紀念碑',
+        titleEn: 'Choragic Monument of Lysicrates',
+        caption: '主前 334 年・雅典普拉卡區。現存最早在建築外部使用科林斯柱式的實例——柱頭飾以茂盛的莨苕葉，是三大柱式中最晚出現、最華麗的一種。',
+        portrait: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Berlin_-_Pergamonmuseum_-_Altar_01.jpg/960px-Berlin_-_Pergamonmuseum_-_Altar_01.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Berlin_-_Pergamonmuseum_-_Altar_01.jpg',
+        credit: 'Lestat (Jan Mehlich) / CC BY-SA 3.0',
+        titleZh: '別迦摩宙斯祭壇',
+        titleEn: 'Pergamon Altar',
+        caption: '希臘化時期・主前 2 世紀。原址在小亞細亞別迦摩，19 世紀運往柏林重建。浮雕描繪眾神與巨人之戰，肌肉與動態充滿張力；常被認為與啟示錄 2:13「撒但座位之處」有關。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg/960px-Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Victoire_de_Samothrace_-_Musee_du_Louvre_-_20190812.jpg',
+        credit: 'Shonagon / CC0',
+        titleZh: '薩莫色雷斯勝利女神像',
+        titleEn: 'Winged Victory of Samothrace',
+        caption: '希臘化時期・約主前 190 年。女神迎風展翅降落船頭，濕衣貼身的褶紋展現對人體結構的精確掌握。出土於撒摩特喇島——正是保羅從特羅亞開船往尼亞波利途中經過之地（徒 16:11）。現藏羅浮宮。',
+        portrait: true
+      }
+    ]
   },
   {
     id: 'greek-city-states-polis',
@@ -91,7 +170,60 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
       }
     ],
     keyFigures: ['梭倫 (Solon)', '克里斯提尼 (Cleisthenes)', '列奧尼達一世 (Leonidas)'],
-    scripturalConnection: '保羅所傳道的腓立比、帖撒羅尼迦、雅典、哥林多，均承襲了古希臘城邦特質，市民大會、阿哥拉（市集）與自治議會構成了早期福音辯論的公眾講台。'
+    scripturalConnection: '保羅所傳道的腓立比、帖撒羅尼迦、雅典、哥林多，均承襲了古希臘城邦特質，市民大會、阿哥拉（市集）與自治議會構成了早期福音辯論的公眾講台。',
+    gallery: [
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Greek_World_in_490_BC_%28in_English%29.png/1280px-Greek_World_in_490_BC_%28in_English%29.png',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Greek_World_in_490_BC_(in_English).png',
+        credit: 'Carl Priger / CC0',
+        titleZh: '主前 490 年的希臘城邦世界',
+        titleEn: 'Greek City-States in 490 BC',
+        caption: '希臘從來不是一個統一的國家，而是數百個各自獨立的城邦（polis）：每城有自己的衛城、守護神、法律與軍隊。圖中可見雅典（阿提卡）、斯巴達（拉哥尼亞）、哥林多、底比斯等主要城邦，以及愛琴海東岸小亞細亞的希臘城市。腓立比與帖撒羅尼迦要到主前 4 世紀才由馬其頓建城，而保羅日後傳道的哥林多與雅典此時已是一方強邦。',
+        isMap: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Greek_Colonization_Archaic_Period.svg/1280px-Greek_Colonization_Archaic_Period.svg.png',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Greek_Colonization_Archaic_Period.svg',
+        credit: 'Dipa1965 / CC BY-SA 4.0',
+        titleZh: '古風時代希臘殖民擴張',
+        titleEn: 'Greek Colonization in the Archaic Period',
+        caption: '主前 8–6 世紀，希臘城邦向外派出移民，在地中海與黑海沿岸建立數百個殖民城邦：南義大利「大希臘」、西西里、馬賽、北非昔蘭尼與黑海沿岸。希臘語言與城邦制度由此廣傳，日後成為福音以希臘文傳遍羅馬世界的伏筆。',
+        isMap: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Map_Peloponnesian_War_431_BC-en.svg/1280px-Map_Peloponnesian_War_431_BC-en.svg.png',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Map_Peloponnesian_War_431_BC-en.svg',
+        credit: 'Marsyas, Aeonx / CC BY-SA 3.0',
+        titleZh: '雅典與斯巴達兩大陣營（主前 431 年）',
+        titleEn: 'Alliances at the Start of the Peloponnesian War',
+        caption: '城邦制度的兩種典型：以海軍與商貿立國、實行民主的雅典（提洛同盟），對上以陸軍與寡頭軍國立國的斯巴達（伯羅奔尼撒同盟）。兩大陣營的對立最終爆發伯羅奔尼撒戰爭。',
+        isMap: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg/1280px-Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg',
+        credit: 'A.Savin / CC BY-SA 3.0',
+        titleZh: '雅典衛城 (Acropolis)',
+        titleEn: 'Acropolis of Athens',
+        caption: '「衛城」即「高處的城」：建在易守難攻的岩丘上，既是防禦外敵的要塞，也是城邦的宗教中心與權力象徵。從菲洛帕波斯山望去，可見衛城頂上的巴特農神廟。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Pnyx_speaker%27s_platform_%28%CE%92%CE%AE%CE%BC%CE%B1%29_in_Athens%2C_Greece.jpg/1280px-Pnyx_speaker%27s_platform_%28%CE%92%CE%AE%CE%BC%CE%B1%29_in_Athens%2C_Greece.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Pnyx_speaker%27s_platform_(%CE%92%CE%AE%CE%BC%CE%B1)_in_Athens,_Greece.jpg',
+        credit: 'philip.mallis / CC BY-SA 2.0',
+        titleZh: '普尼克斯山演講台 (Pnyx)',
+        titleEn: 'The Pnyx, Athens',
+        caption: '雅典公民大會的開會地點。公民輪流登上這座石鑿講台（Bema）發言辯論、投票表決——這就是「民主」（Democracy）的現場，位於衛城西側、鄰近亞略巴古。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/The_ruins_of_the_ancient_Theatre_of_Sparta_on_May_15%2C_2019.jpg/1280px-The_ruins_of_the_ancient_Theatre_of_Sparta_on_May_15%2C_2019.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:The_ruins_of_the_ancient_Theatre_of_Sparta_on_May_15,_2019.jpg',
+        credit: 'George E. Koronaios / CC0',
+        titleZh: '斯巴達古劇場遺址',
+        titleEn: 'Ancient Theatre of Sparta',
+        caption: '與雅典相反，斯巴達幾乎沒有留下宏偉建築：整個城邦如同一座大軍營，全力投入軍事訓練。遺址背後是泰格特斯山脈，正是斯巴達賴以防守的天然屏障。'
+      }
+    ]
   },
   {
     id: 'peloponnesian-war',
@@ -147,7 +279,75 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
       }
     ],
     keyFigures: ['菲力浦二世 (Philip II)', '亞歷山大大帝 (Alexander the Great)', '卡山德 (Cassander)', '塞琉古一世 (Seleucus I)', '托勒密一世 (Ptolemy I)'],
-    scripturalConnection: '但以理書第七與八章中公山羊與豹（四個翅膀與四個頭）的歷史異象，精準預言了亞歷山大與其帝國分裂為四國的歷史軌跡。'
+    scripturalConnection: '但以理書第七與八章中公山羊與豹（四個翅膀與四個頭）的歷史異象，精準預言了亞歷山大與其帝國分裂為四國的歷史軌跡。',
+    gallery: [
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/One_of_Pompeii%27s_most_famous_floor_mosaics%2C_the_Alexander_Mosaic_%2852786417509%29.jpg/1280px-One_of_Pompeii%27s_most_famous_floor_mosaics%2C_the_Alexander_Mosaic_%2852786417509%29.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:One_of_Pompeii%27s_most_famous_floor_mosaics,_the_Alexander_Mosaic_(52786417509).jpg',
+        credit: 'Tracey Hind / CC BY-SA 2.0',
+        titleZh: '亞歷山大鑲嵌畫：伊蘇斯戰役',
+        titleEn: 'Alexander Mosaic (Battle of Issus)',
+        caption: '約主前 100 年出土於龐貝城農牧神之家。左方策馬衝鋒的是亞歷山大，右方戰車上驚惶回望的是波斯王大流士三世——描繪主前 333 年的伊蘇斯戰役。現藏拿坡里國家考古博物館。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/MacedonEmpire.jpg/1280px-MacedonEmpire.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:MacedonEmpire.jpg',
+        credit: 'Generic Mapping Tools / CC BY-SA 3.0',
+        titleZh: '亞歷山大帝國疆域',
+        titleEn: 'Empire of Alexander the Great',
+        caption: '短短十年東征，帝國從希臘、埃及一路延伸至兩河流域、波斯、阿富汗與印度西北部，是當時疆域最大的帝國。',
+        isMap: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Diadochi_EN.png/960px-Diadochi_EN.png',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Diadochi_EN.png',
+        credit: 'Luigi Chiesa, Morningstar1814 / CC BY-SA 4.0',
+        titleZh: '帝國分裂：繼業者諸王國（約主前 300 年）',
+        titleEn: 'Kingdoms of the Diadochi, c. 300 BC',
+        caption: '亞歷山大死後帝國分裂：卡山德據馬其頓與希臘、萊西馬克斯據色雷斯與小亞細亞、塞琉古據敘利亞至波斯、托勒密據埃及。夾在托勒密與塞琉古之間的猶太地，此後百多年輪流受兩國統治——正應驗但以理書 8 章「四角」與 11 章「南方王與北方王」的異象。',
+        isMap: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Antiochos_IV_Epiphanes_tetradrachm.jpg/960px-Antiochos_IV_Epiphanes_tetradrachm.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Antiochos_IV_Epiphanes_tetradrachm.jpg',
+        credit: 'Samu0450 / CC BY-SA 4.0',
+        titleZh: '安提阿古四世銀幣',
+        titleEn: 'Tetradrachm of Antiochus IV Epiphanes',
+        caption: '塞琉古王安提阿古四世自稱「Epiphanes」（神的顯現），正是希臘化君主「以神權號召」的寫照。他強迫猶太人希臘化、在聖殿祭祀宙斯，引發馬加比起義。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Alexander_Jannaeus_coin.JPG/960px-Alexander_Jannaeus_coin.JPG',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Alexander_Jannaeus_coin.JPG',
+        credit: 'Atzmonit / CC BY-SA 4.0',
+        titleZh: '哈斯摩尼王朝錢幣（亞歷山大・楊紐斯）',
+        titleEn: 'Prutah of Alexander Jannaeus',
+        caption: '馬加比家族的後代、猶太王兼大祭司楊紐斯（主前 103–76 年）所鑄。一面是希伯來文「大祭司約拿單與猶太議會」，另一面卻是希臘化世界流行的「豐饒之角」圖案——連抵抗希臘化起家的王朝也深受希臘文化影響。這類小銅幣常被認為就是福音書中寡婦投入聖殿的「小錢」（可 12:42）。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/72/P._Rylands_458.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:P._Rylands_458.jpg',
+        credit: 'Public domain',
+        titleZh: '七十士譯本最古老殘片 (P. Rylands 458)',
+        titleEn: 'Papyrus Rylands 458',
+        caption: '約主前 2 世紀的申命記希臘文莎草紙殘片，是現存最古老的七十士譯本抄本之一，出土於埃及。證明早在耶穌降生前一百多年，散居各地的猶太人已用希臘文誦讀摩西律法。現藏英國曼徹斯特約翰萊蘭茲圖書館。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Codex_Vaticanus_B%2C_2Thess._3%2C11-18%2C_Hebr._1%2C1-2%2C2.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B,_2Thess._3,11-18,_Hebr._1,1-2,2.jpg',
+        credit: 'Public domain',
+        titleZh: '梵蒂岡抄本 (Codex Vaticanus)',
+        titleEn: 'Codex Vaticanus',
+        caption: '主後 4 世紀的希臘文聖經抄本，同時保存七十士譯本舊約與新約（圖為帖撒羅尼迦後書至希伯來書一頁）。新約作者引用舊約時多採七十士譯本，福音因此能以同一種語言傳遍地中海世界。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Jerusalem_Modell_BW_2.JPG/1280px-Jerusalem_Modell_BW_2.JPG',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Jerusalem_Modell_BW_2.JPG',
+        credit: 'Berthold Werner / Public domain',
+        titleZh: '耶穌時代的耶路撒冷聖殿模型',
+        titleEn: 'Holyland Model of Herod\'s Temple',
+        caption: '以色列博物館的第二聖殿時期耶路撒冷模型。希律王重建的聖殿四周環繞著希臘羅馬式柱廊（如「所羅門廊」，約 10:23），城中還有劇場與競技場——耶穌降生時的猶太世界，已是希伯來信仰與希臘羅馬文化交織的世界。'
+      }
+    ]
   },
   {
     id: 'hellenistic-society',
@@ -228,10 +428,76 @@ export const historyEncyclopediaData: HistoricalTopic[] = [
       {
         subtitle: '奧勒流 (Marcus Aurelius, 161-180 年在位)',
         content: '羅馬帝國五賢帝時代最後一個皇帝，是羅馬帝國最偉大的皇帝之一，其統治時期被認為是羅馬黃金時代。他也是著名的斯多葛派哲學家，著有傳世名作《沉思錄》（Meditations）。\n對基督徒政策：奧勒流因基督徒對信仰的狂熱和執著，特別憎惡基督徒，害比以前更厲害。以辯道見稱的教父猶斯丁（Justin Martyr）亦於此時殉道。'
+      },
+      {
+        subtitle: '後記：從逼迫到米蘭敕令 (313 年)',
+        content: '五賢帝之後，德修（250 年）與戴克里先（303 年「大逼迫」）先後發動全帝國性的逼迫。主後 313 年，君士坦丁與李錫尼在米蘭頒布敕令，宣布宗教寬容、歸還教會被沒收的財產，基督信仰從此合法化——「殉道者的血是教會的種子」（特土良）終於結出果子。'
       }
     ],
     keyFigures: ['圖拉真 (Trajan)', '安敦尼・畢尤 (Antoninus Pius)', '奧勒流 (Marcus Aurelius)', '以格那提 (Ignatius)', '坡旅甲 (Polycarp)', '猶斯丁 (Justin Martyr)'],
-    scripturalConnection: '啟示錄與彼得前書所勉勵的受苦與試煉，正是初期信徒在羅馬帝國法律與社會壓力下堅守信仰的真實寫照。'
+    scripturalConnection: '啟示錄與彼得前書所勉勵的受苦與試煉，正是初期信徒在羅馬帝國法律與社會壓力下堅守信仰的真實寫照。',
+    gallery: [
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Henryk_Siemiradzki_Nero%27s_torches_1882.jpg/1280px-Henryk_Siemiradzki_Nero%27s_torches_1882.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Henryk_Siemiradzki_Nero%27s_torches_1882.jpg',
+        credit: 'Henryk Siemiradzki (1882) / Public domain',
+        titleZh: '《尼祿的火炬》',
+        titleEn: 'Nero\'s Torches',
+        caption: '波蘭畫家西米拉茲基 1882 年作品（19 世紀歷史畫，非當代紀錄）。主後 64 年羅馬大火後，尼祿歸罪基督徒；據史家塔西佗記載，信徒被披上獸皮讓犬撕咬，或被釘於柱上點火作為夜間照明。這是羅馬帝國第一次大規模逼迫教會，相傳彼得與保羅亦在此時期殉道。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bust_of_Trajan_%28GL_336%29_-_Glyptothek_-_Munich_-_Germany_2017_%282%29.jpg/960px-Bust_of_Trajan_%28GL_336%29_-_Glyptothek_-_Munich_-_Germany_2017_%282%29.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bust_of_Trajan_(GL_336)_-_Glyptothek_-_Munich_-_Germany_2017_(2).jpg',
+        credit: 'José Luiz / CC BY-SA 4.0',
+        titleZh: '圖拉真胸像',
+        titleEn: 'Bust of Trajan (r. 98–117)',
+        caption: '「勇帝」圖拉真，在位時羅馬版圖達到極盛。他回覆庇推尼總督小普林尼的信中定下政策：不主動搜捕基督徒，但被告發而拒絕向皇帝像獻祭者處死。安提阿主教以格那提即在此時被押往羅馬殉道。現藏慕尼黑古代雕塑展覽館。',
+        portrait: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Antoninus_Pius_bust_S2436_ancient_agora_museum_Athens.jpg/960px-Antoninus_Pius_bust_S2436_ancient_agora_museum_Athens.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Antoninus_Pius_bust_S2436_ancient_agora_museum_Athens.jpg',
+        credit: 'Jebulon / CC0',
+        titleZh: '安敦尼・畢尤胸像',
+        titleEn: 'Bust of Antoninus Pius (r. 138–161)',
+        caption: '「忠帝」安敦尼・畢尤，帝國進入全盛的太平歲月，但圖拉真的逼迫政策仍被沿用——士每拿主教坡旅甲在他統治期間被焚殉道。這尊胸像就收藏在雅典古阿哥拉博物館，參觀古市集時可以親眼看見。',
+        portrait: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Rome_Capitoline_Marcus_Aurelius_statue_original.jpg/960px-Rome_Capitoline_Marcus_Aurelius_statue_original.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Rome_Capitoline_Marcus_Aurelius_statue_original.jpg',
+        credit: 'Nicholas Hartmann / CC BY-SA 4.0',
+        titleZh: '奧勒流騎馬銅像',
+        titleEn: 'Equestrian Statue of Marcus Aurelius (r. 161–180)',
+        caption: '現存唯一完整的古羅馬皇帝騎馬青銅像，中世紀時被誤認為第一位基督徒皇帝君士坦丁，才逃過被熔毀的命運。這位著有《沉思錄》的斯多葛派哲學家皇帝，卻對基督徒格外嚴厲：殉道者猶斯丁及里昂的殉道者（177 年）都在他任內殉道。現藏羅馬卡比托利歐博物館。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_The_Christian_Martyrs%27_Last_Prayer_-_Walters_37113.jpg/1280px-Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_The_Christian_Martyrs%27_Last_Prayer_-_Walters_37113.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_The_Christian_Martyrs%27_Last_Prayer_-_Walters_37113.jpg',
+        credit: 'Jean-Léon Gérôme (1883) / Public domain',
+        titleZh: '《基督徒殉道者最後的禱告》',
+        titleEn: 'The Christian Martyrs\' Last Prayer',
+        caption: '法國畫家傑洛姆 1883 年作品（19 世紀歷史畫）。羅馬競技場中，一群信徒圍跪禱告，獅子正從地道走出，看台上萬頭攢動，四周還有被釘十字架點火的殉道者——正是以格那提「我是上帝的麥子，要藉野獸的牙齒被磨碎」的場景寫照。現藏美國巴爾的摩華特斯美術館。'
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Colossal_head_of_Constantine_%28M.C._inv._1072%29%2C_August_24%2C_2021.jpg/960px-Colossal_head_of_Constantine_%28M.C._inv._1072%29%2C_August_24%2C_2021.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Colossal_head_of_Constantine_(M.C._inv._1072),_August_24,_2021.jpg',
+        credit: 'D. Benjamin Miller / Public domain',
+        titleZh: '君士坦丁巨像頭部',
+        titleEn: 'Colossal Head of Constantine',
+        caption: '原屬一尊高約 12 米的君士坦丁坐像，單是頭部就高 2.5 米。主後 312 年米爾維安大橋之役後，君士坦丁成為第一位支持基督教的羅馬皇帝，翌年頒布米蘭敕令。現藏羅馬卡比托利歐博物館。',
+        portrait: true
+      },
+      {
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Statua_di_Costantino_I_sul_sagrato_di_San_Lorenzo%2C_Milano%2C_fusione_bronzea_del_1937.jpg/960px-Statua_di_Costantino_I_sul_sagrato_di_San_Lorenzo%2C_Milano%2C_fusione_bronzea_del_1937.jpg',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Statua_di_Costantino_I_sul_sagrato_di_San_Lorenzo,_Milano,_fusione_bronzea_del_1937.jpg',
+        credit: 'Paolobon140 / CC BY-SA 4.0',
+        titleZh: '米蘭聖羅倫佐大殿前的君士坦丁像',
+        titleEn: 'Constantine at San Lorenzo, Milan',
+        caption: '米蘭敕令（主後 313 年）沒有留下原件或當代圖像，其內容由教會史家拉克坦提烏與優西比烏保存。這座立於米蘭聖羅倫佐大殿前的君士坦丁銅像（1937 年鑄造，仿羅馬古像），正是紀念君士坦丁與李錫尼在米蘭會晤、宣布宗教寬容、歸還教會財產——結束近 250 年斷續逼迫的歷史轉捩點。',
+        portrait: true
+      }
+    ]
   },
   {
     id: 'greek-cuisine',
