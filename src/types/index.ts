@@ -51,6 +51,12 @@ export interface DayItinerary {
   };
   events: ScheduleEvent[];
   devotionalPrompt: string;
+  heroImage?: {
+    url: string;
+    sourceUrl: string;
+    credit: string;
+    caption: string;
+  };
 }
 
 export interface DailyWeatherForecast {

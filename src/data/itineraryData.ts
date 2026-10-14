@@ -110,7 +110,13 @@ export const itineraryData: DayItinerary[] = [
         category: 'worship'
       }
     ],
-    devotionalPrompt: '「不要怕，只管講，不要閉口，因為在這城裡我有許多的百姓。」在你感到孤單懼怕的時候，主的話語如何成為你剛強壯膽的後盾？'
+    devotionalPrompt: '「不要怕，只管講，不要閉口，因為在這城裡我有許多的百姓。」在你感到孤單懼怕的時候，主的話語如何成為你剛強壯膽的後盾？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bema%2C_Corinth%2C_Kori513.jpg/1280px-Bema%2C_Corinth%2C_Kori513.jpg',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bema,_Corinth,_Kori513.jpg',
+      credit: 'Zde / CC BY-SA 4.0',
+      caption: '哥林多古城迦流審判台 (Bema)——保羅在此受審，方伯迦流不受理控告（徒 18:12-17）'
+    }
   },
   {
     dayNumber: 2,
@@ -189,7 +195,13 @@ export const itineraryData: DayItinerary[] = [
         category: 'meal'
       }
     ],
-    devotionalPrompt: '保羅看見滿城偶像就「心裡著急」，卻以極大的智慧引導雅典哲士尋求「未識之神」。今天當面對無神與世俗思潮，我們如何以溫柔敬畏的心回答人？'
+    devotionalPrompt: '保羅看見滿城偶像就「心裡著急」，卻以極大的智慧引導雅典哲士尋求「未識之神」。今天當面對無神與世俗思潮，我們如何以溫柔敬畏的心回答人？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Areopagus_hill_Saint_Paul_from_Acropolis_Athens.jpg/1280px-Areopagus_hill_Saint_Paul_from_Acropolis_Athens.jpg',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Areopagus_hill_Saint_Paul_from_Acropolis_Athens.jpg',
+      credit: 'Jebulon / CC0',
+      caption: '從雅典衛城俯瞰亞略巴古（戰神山）——保羅講論「未識之神」之處（徒 17:22-31）'
+    }
   },
   {
     dayNumber: 3,
@@ -253,7 +265,13 @@ export const itineraryData: DayItinerary[] = [
         category: 'worship'
       }
     ],
-    devotionalPrompt: '長途跋涉之後，神領我們到「那比我更高的磐石」。在人生漫長的路上，你在哪裡找到使心靈重新得力的磐石？'
+    devotionalPrompt: '長途跋涉之後，神領我們到「那比我更高的磐石」。在人生漫長的路上，你在哪裡找到使心靈重新得力的磐石？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Meteora_Sunset.jpg/1280px-Meteora_Sunset.jpg',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Meteora_Sunset.jpg',
+      credit: 'Dimitris9444 / CC BY-SA 4.0',
+      caption: '邁泰奧拉巨石日落——今晚在懸崖觀景台舉行讚美禮拜'
+    }
   },
   {
     dayNumber: 4,
@@ -317,7 +335,13 @@ export const itineraryData: DayItinerary[] = [
         category: 'sight'
       }
     ],
-    devotionalPrompt: '邁泰奧拉的修士遠離塵囂在絕壁上追求神的同在。身處繁忙世俗的你，如何在心靈深處築起一座專屬於神的聖殿？'
+    devotionalPrompt: '邁泰奧拉的修士遠離塵囂在絕壁上追求神的同在。身處繁忙世俗的你，如何在心靈深處築起一座專屬於神的聖殿？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Great_Meteoron_Monastery_06.jpg/1280px-Great_Meteoron_Monastery_06.jpg',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Great_Meteoron_Monastery_06.jpg',
+      credit: 'Bernard Gagnon / CC BY-SA 4.0',
+      caption: '聳立於巨石之巔的大邁泰奧拉修道院'
+    }
   },
   {
     dayNumber: 5,
@@ -407,7 +431,13 @@ export const itineraryData: DayItinerary[] = [
         category: 'sight'
       }
     ],
-    devotionalPrompt: '「天天考查聖經，要曉得這道是與不是」——在各種資訊氾濫的時代，聖經是否依然是你判斷萬事的唯一絕對標準？'
+    devotionalPrompt: '「天天考查聖經，要曉得這道是與不是」——在各種資訊氾濫的時代，聖經是否依然是你判斷萬事的唯一絕對標準？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Altar_de_Saint_Paul.jpg/1280px-Altar_de_Saint_Paul.jpg',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Altar_de_Saint_Paul.jpg',
+      credit: 'Iolchos07 / CC BY-SA 4.0',
+      caption: '庇哩亞使徒保羅講台紀念碑——「天天考查聖經」（徒 17:11）'
+    }
   },
   {
     dayNumber: 6,
@@ -487,7 +517,13 @@ export const itineraryData: DayItinerary[] = [
         category: 'worship'
       }
     ],
-    devotionalPrompt: '帖撒羅尼迦教會在極大逼迫中仍成為馬其頓和亞該亞所有信主之人的榜樣。在當代浮躁世界中，你的信仰有否活出信、望、愛的影響力？'
+    devotionalPrompt: '帖撒羅尼迦教會在極大逼迫中仍成為馬其頓和亞該亞所有信主之人的榜樣。在當代浮躁世界中，你的信仰有否活出信、望、愛的影響力？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Arch_of_Galerius_%28Rotonda_in_the_background%29_-_2019.jpg/1280px-Arch_of_Galerius_%28Rotonda_in_the_background%29_-_2019.jpg',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Arch_of_Galerius_(Rotonda_in_the_background)_-_2019.jpg',
+      credit: 'Annatsach / CC BY-SA 4.0',
+      caption: '帖撒羅尼迦伽列裡烏斯凱旋門，後方為圓形大廳 (Rotunda)'
+    }
   },
   {
     dayNumber: 7,
@@ -573,7 +609,13 @@ export const itineraryData: DayItinerary[] = [
         category: 'reflection'
       }
     ],
-    devotionalPrompt: '保羅在腓立比與帖撒羅尼迦之間步行約150公里的艱苦跋涉。是什麼力量驅使他不知疲倦地將基督真道傳給未得之民？'
+    devotionalPrompt: '保羅在腓立比與帖撒羅尼迦之間步行約150公里的艱苦跋涉。是什麼力量驅使他不知疲倦地將基督真道傳給未得之民？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Amphipolis_Lion.jpg/960px-Amphipolis_Lion.jpg',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Amphipolis_Lion.jpg',
+      credit: 'Kkonstan / CC BY 3.0',
+      caption: '暗妃波里石獅巨像——保羅與西拉沿埃格納提亞大道經過此城（徒 17:1）'
+    }
   },
   {
     dayNumber: 8,
@@ -684,7 +726,13 @@ export const itineraryData: DayItinerary[] = [
         category: 'sight'
       }
     ],
-    devotionalPrompt: '半夜、重傷、被囚，保羅與西拉的反應竟是「禱告、唱詩讚美神」。在生活的黑暗泥濘中，你的第一反應是什麼？'
+    devotionalPrompt: '半夜、重傷、被囚，保羅與西拉的反應竟是「禱告、唱詩讚美神」。在生活的黑暗泥濘中，你的第一反應是什麼？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Lydia_Baptistery_BW_2017-10-05_11-15-20.jpg/1280px-Lydia_Baptistery_BW_2017-10-05_11-15-20.jpg',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Lydia_Baptistery_BW_2017-10-05_11-15-20.jpg',
+      credit: 'Berthold Werner / CC BY-SA 3.0',
+      caption: '腓立比甘吉特斯河畔的聖呂底亞洗禮堂——歐洲第一位信徒受洗之處（徒 16:14-15）'
+    }
   },
   {
     dayNumber: 9,
@@ -768,7 +816,13 @@ export const itineraryData: DayItinerary[] = [
         category: 'worship'
       }
     ],
-    devotionalPrompt: '福音從特羅亞的一個異象開始，跨越海洋改變了整個歐洲。回想人生中，你是否也曾聽見神在安靜中給你的「馬其頓呼聲」？你如何順服啟程？'
+    devotionalPrompt: '福音從特羅亞的一個異象開始，跨越海洋改變了整個歐洲。回想人生中，你是否也曾聽見神在安靜中給你的「馬其頓呼聲」？你如何順服啟程？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Alexandria_Troas_Thermen.JPG/1280px-Alexandria_Troas_Thermen.JPG',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Alexandria_Troas_Thermen.JPG',
+      credit: 'Elelicht / CC BY-SA 3.0',
+      caption: '亞歷山大特羅亞古城遺址——保羅看見「馬其頓人異象」的港城（徒 16:9）'
+    }
   },
   {
     dayNumber: 10,
@@ -814,6 +868,12 @@ export const itineraryData: DayItinerary[] = [
         category: 'travel'
       }
     ],
-    devotionalPrompt: '朝聖的終點，正是實踐的起點。保羅從特羅亞再次啟程，今天神要在你的生活現場託付你怎樣的宣教使命？'
+    devotionalPrompt: '朝聖的終點，正是實踐的起點。保羅從特羅亞再次啟程，今天神要在你的生活現場託付你怎樣的宣教使命？',
+    heroImage: {
+      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Assos_Athena_temple_029.jpg/1280px-Assos_Athena_temple_029.jpg',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Assos_Athena_temple_029.jpg',
+      credit: 'Dosseman / CC BY-SA 4.0',
+      caption: '亞朔雅典娜神廟遺址遠眺愛琴海——保羅從特羅亞步行至此上船（徒 20:13-14）'
+    }
   }
 ];

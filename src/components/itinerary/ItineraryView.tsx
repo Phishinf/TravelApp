@@ -160,7 +160,29 @@ export const ItineraryView: React.FC<ItineraryViewProps> = ({
       </div>
 
       {/* Main Day Header Card */}
-      <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-amber-950/30 border border-amber-900/50 shadow-xl space-y-5">
+      <div className="rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-amber-950/30 border border-amber-900/50 shadow-xl overflow-hidden">
+        {currentDay.heroImage && (
+          <figure className="relative h-48 sm:h-64 md:h-72 bg-slate-950">
+            <img
+              key={currentDay.heroImage.url}
+              src={currentDay.heroImage.url}
+              alt={currentDay.heroImage.caption}
+              className="w-full h-full object-cover"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 px-5 pt-10 pb-3 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-transparent flex flex-col sm:flex-row sm:items-end justify-between gap-1">
+              <span className="text-xs sm:text-sm text-amber-100 font-medium">{currentDay.heroImage.caption}</span>
+              <a
+                href={currentDay.heroImage.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] text-slate-400 hover:text-amber-300 underline flex-shrink-0"
+              >
+                圖片：{currentDay.heroImage.credit}
+              </a>
+            </figcaption>
+          </figure>
+        )}
+      <div className="p-6 space-y-5">
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2 flex-wrap">
@@ -242,6 +264,7 @@ export const ItineraryView: React.FC<ItineraryViewProps> = ({
             </p>
           </div>
         </div>
+      </div>
       </div>
 
       {/* 3-Day Weather Forecast Component */}
